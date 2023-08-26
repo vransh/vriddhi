@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Start Your Journey</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Custom styles for this template -->
+
+
+  
+   
+ <link href="{{url_for('static', filename='css/signin.css')}}" rel="stylesheet">
+  </head>
+ <body>
+  <div class="form-body">
+    <div class="row">
+        <div class="form-holder">
+            <div class="form-content">
+               
+                <div class="form-items">
+                    <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+                    <h3>Welcome individual</h3>
+                  
+                    {% for message in get_flashed_messages() %}
+                    <div class="alert alert-dark" role="alert"id="alert">
+
+                     {{message}}
+                   </div>
+                   {% endfor %}
+                   <br>
+                    <form method="post" action="/signin">
+
+                     
+
+                        <div class="col-md-12">
+                            <input class="form-control" type="email" name="email" placeholder="Email" required>
+                             <div class="valid-feedback">Email field is valid!</div>
+                             <div class="invalid-feedback">Email field cannot be blank!</div>
+                        </div>
+
+                    
+
+
+                       <div class="col-md-12">
+                          <input class="form-control" type="password" name="password" placeholder="Password" required>
+                           <div class="valid-feedback">Password field is valid!</div>
+                           <div class="invalid-feedback">Password field cannot be blank!</div>
+                           <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Log In</button></div><a href="/new_account" class="forgot">Dont't have an account !<span> Create it</span></a></form>
+                       </div>
+
+                     
+
+                   
+              
+
+                     
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ </body>
+</html>

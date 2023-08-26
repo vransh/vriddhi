@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <!-- Page Header -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/Post.jpg') }}')">
+      <div class="overlay"></div>
+      <div class="container-image-fluid">
+       
+            <div class="site-heading">
+              <h1>{{post.title}}</h1>
+              <div  class="subheading">A thinking of an Individual</div>
+              
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <body>
+      <link href="{{ url_for('static', filename='css/for_home.css') }}" rel="stylesheet">
+
+    <!-- Post Content -->
+    <article>
+      <div class="container-content">
+          <div class="post-content">
+            {{post.content}}
+           <div class="user-discuss">
+            ➔ Posted by {{post.user.username}} on {{post.date}}
+           </div>
+            
+          </div>
+     </div>
+    </article>
+
+   {% endblock %}

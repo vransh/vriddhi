@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<header class="masthead" style="background-image: url('{{ url_for('static', filename='img/profile.webp') }}')">
+  <div class="overlay"></div>
+  <div class="container-image-fluid">
+   
+        <div class="site-heading">
+          <h1>{{user.username}}</h1>
+          <span class="subheading">Became A Individual on {{user.date}}</span>
+          
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  <link href="{{ url_for('static', filename='css/for_account.css') }}" rel="stylesheet">
+</header>
+    
+    <!-- Main Content -->
+  <body>
+   
+    <div class="container-des">
+      
+    
+   
+    <p>Description</p>
+    
+      
+    <div class="description">
+     
+      <div class="desire" >{{user.description}}
+       <br>
+      </div>
+    
+    </div>
+
+  </br>
+  <div class="badge bg-dark text-wrap" id="uid">
+    SPI : {{user.id}}
+  </div>
+    
+  </div>
+  <hr>
+  <hr>
+  <div class="container-post-profile">
+    <h2> Intellects</h2>
+    </br>
+    {% if posts_of_user %}
+        {% for post_of_user in posts_of_user %}
+        <div class="post-preview">
+          <br>
+              <div class="post-title">{{ post_of_user.title }}
+              </div>
+            <p class="post-meta">➔ Posted by {{user.username}}
+            
+              on {{post_of_user.date}}</p>
+          <div class="content-prof" >{{post_of_user.content[0:300]}}...</div>
+        </br> 
+      </br>
+        <div class="buttons">
+      <a class="btn btn-warning "href="/individual_post/{{post_of_user.slug}}" role="button">  View</a>
+     </div>
+    <br>
+        </div>
+     <br>
+     <br>
+      
+   
+        {% endfor %}
+
+      
+        {% else %}
+        <h3>NO thinking yet</h3>
+        {% endif %}
+        </div>
+     
+  </body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+{% endblock %}
+
+    
+ 

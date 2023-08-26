@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+{% block body %}
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/cycle.jpg') }}')">
+      <div class="overlay"></div>
+      <div class="container-image-fluid">
+       
+            <div class="site-heading">
+              <h1>V_ridDhᴉ</h1>
+              <div class="subheading">Be A Individual</div>
+              
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <body>
+      <link href="{{ url_for('static', filename='css/for_home.css') }}" rel="stylesheet">
+      <div class="animation"></div>
+    
+      <div class="container-waterflow">
+        <div class="waterflow">
+       
+        </div>
+        </div>
+       
+     
+       <h3>You thought of....  ||<span class="searched">{{searched}}</span></h3>  
+          <h4></h4>
+  
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+   
+       
+      {% for post in posts %}
+      {% if loop.index %2==0 %}
+  
+      <div class="container-fluid" >
+      <div class="container-1">
+        <div id=user-info-1>
+          <div id="logo-1">
+            {% set fname = 'img/'+  params['login_image']  %}
+            <img class="mb" src="{{url_for('static', filename=fname)}}" alt="" width="110" height="110">
+          </div>
+          <div id="username-1">
+           {{post.user.username}}
+        </div>
+        <div id="uid-1">
+          <a href="/user_account/{{post.user.id}}">SPI: {{post.user.id}}</a>
+        </div>
+        </div>
+          <div class="post-preview-1">
+            <a href="/individual_post/{{post.slug}}"|slugify|>
+             
+<br>
+              <h2 class="post-title-1">{{ post.title }}
+
+              </h2>
+             
+            </a>
+            <p class="post-meta-1">➔ Posted by <a href="/user_account/{{post.user.id}}"><span>{{post.user.username}}</span></a>
+
+              on {{post.date}}</p>
+          </div>
+          <div class="content-1">
+          {{post.content[0:300]}}...
+          </div>
+          <br>
+          <br>
+         
+          </div> 
+          </div>
+         
+          
+<br>
+<br>
+<br>
+{% else %}
+
+
+<div class="container-fluid">
+ 
+<div class="container-2">
+  <div id=user-info-2>
+    <div id="logo-2">
+      {% set fname = 'img/'+  params['login_image']  %}
+      <img class="mb" src="{{url_for('static', filename=fname)}}" alt="" width="110" height="110">
+    </div>
+    <div id="username-2">
+     {{post.user.username}}
+  </div>
+  <div id="uid-2">
+  <a href="/user_account/{{post.user.id}}">SPI: {{post.user.id}}</a>
+  </div>
+  
+  </div>
+
+  <div class="post-preview-2">
+    <a href="/individual_post/{{post.slug}}"|slugify|>
+     
+       <br>
+      <h2 class="post-title-2">{{ post.title }}
+
+      </h2>
+     
+    </a>
+   
+    <p class="post-meta-2">➔ Posted by <a href="/user_account/{{post.user.id}}"><span>{{post.user.username}}</span></a>
+     
+      on {{post.date}}</p>
+  </div>
+<div class="content-2">
+  {{post.content[0:300]}}...
+ 
+  </div> 
+<br>
+<br>
+</div>
+
+</div>
+
+<br>
+</br>
+<br>
+ {% endif %}
+  {% endfor %}
+ 
+    <br>
+    <br>      
+    <br>
+    <br>      
+    <br>
+    <br>      
+     
+    </body>
+    {% endblock %}

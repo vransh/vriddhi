@@ -1,0 +1,25 @@
+{
+    "params":
+    {
+      "local_server":"True",
+      "local_uri": "mysql://root:@localhost/innovator world",
+      "prod_uri":"mysql://root:@localhost/innovator world",
+      "fb_url":"https://facebook.com/codingthunder",
+      "tw_url":"https://twitter.com/codingthunder",
+      "gh_url": "https://github.com/codingthunder",
+      "blog_name": "Abhi nhi",
+      "tag_line": "Baad mai",
+      "gmail-user":"your-email@gmail.com",
+      "gmail-password":"gmailpassword",
+      "intro_web": " ",
+      "no_of_posts": 3,
+      "login_image":"i.png",
+      "logo_image":"i.png",
+      "admin_user":"ansh",
+      "admin_password": "mine",
+      "upload_location":"C:\\Users\\dell\\ansh\\__Pycache__\\static"
+  
+  
+    }
+  
+  }

@@ -1,0 +1,87 @@
+{% extends "layout.html" %}
+{% block body %}
+    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/bubbles.jpeg') }}')">
+      <div class="overlay"></div>
+      <div class="container-image-fluid">
+        <link href="{{ url_for('static', filename='css/for_community.css') }}" rel="stylesheet">
+       
+      
+        
+      
+       
+            
+    
+        <br>
+        <br>
+        <br>
+            <div class="site-heading">
+              <h1>The IN_dividuals Family</h1>
+              <div class="subheading">Join the WORld</div>
+              </div>
+              <hr>
+              <hr>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              {% for users in users %}
+              {% if loop.index %2==0 %}
+                  <div class="com-1">
+                  <br>
+                      <h2 class="com-title-1">{{users.username}}</h2>
+                    </a>
+                    <p class="com-id-1">SPI: <a href="/user_account/{{users.id}}"><span>{{users.id}}</span></a>
+                  <div class="com-cont-1">
+                  {{users.description[0:100]}}...
+                  </div>
+                  <br>
+                  <br>
+                 
+                  </div>   
+        
+       
+        {% elif loop.index %4==0 %}
+            <div class="com-2">   
+        <br>
+     <h2 class="com-title-2">{{users.username}}
+    </h2>
+ </a>
+ <p class="com-id-2">SPI: <a href="/user_account/{{users.id}}"><span>{{users.id}}</span></a>
+                 <div class="com-cont-2">
+              {{users.description[0:100]}}...
+              </div>
+              <br>
+              <br>
+              </div> 
+    
+        <br>
+        <br>
+        <br>
+        <br>
+        {% else %}
+        <div class="com-3">
+            <br>
+                      <h2 class="com-title-3">{{users.username}}</h2>
+                    </a>
+                    <p class="com-id-3">SPI: <a href="/user_account/{{users.id}}"><span>{{users.id}}</span></a>
+                  <div class="com-cont-3">
+                  {{users.description[0:100]}}...
+                  </div>
+                  <br>
+                  <br>
+                 
+                  </div>    
+           
+         {% endif %}
+          {% endfor %}
+         
+          
+    </header>
+   
+   <br>
+   <br>
+    {% endblock %}
+
+    

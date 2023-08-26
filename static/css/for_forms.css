@@ -1,0 +1,286 @@
+/* for default*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+/* for add post */
+html {
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+ }
+body{
+    background-color: #211e1e;
+ 
+}
+.container-form-1{
+    display: flex;
+ justify-content: center;
+
+}
+.contact-form{
+    background: linear-gradient(17deg, rgba(255,0,0,.8), rgba(255,0,0,0) 84.71%);
+    margin-top: 100%;
+    width: 90%;
+    
+    border-radius: 12px;
+  
+}
+.contact-form .form-control{
+    border-radius:1rem;
+    width: 50%;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 4rem;
+    margin-top: -3%;
+    transform: rotate(29deg);
+}
+.contact-form form{
+    padding: 14%;
+   
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h3{
+    margin-bottom: 5%;
+    margin-top: -10%;
+    text-align: center;
+    color: #496582;
+    font-family: Perpetua;
+    font-size: 30px;
+    font-weight: 700;
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    font-size: 20px;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background:linear-gradient(340deg, rgba(0,0,255,.8), rgba(0,0,255,0));
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+label{
+    color: #000;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #0062cc;
+    border: none;
+    cursor: pointer;
+}
+.form-control{
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 7px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 4px;
+}
+@media (min-width:440px){
+    .contact-form{
+      margin-top: 70%;
+    }
+    .form-control{
+        font-size: 28px;
+        font-weight: 600;
+    }
+    .contact-form h3{
+        font-size: 30px;
+    }
+    .form-control{
+        width: 13rem;
+        height: 1.5rem;
+    }
+    .contact-form img{
+        width: 7rem;
+    }
+    .form-control .btnContact{
+        font-size: 44px;
+    }
+}
+@media (min-width:700px){
+    .contact-form{
+        background-color: #000;
+        margin-top: 45%;
+    }
+    .form-control{
+        font-size: 28px;
+        font-weight: 600;
+    }
+    .contact-form h3{
+        font-size: 38px;
+    }
+    .form-control{
+        width: 80%;
+    }
+    .contact-form img{
+        width: 7rem;
+    }
+}
+
+
+@media (min-width:950px){
+    .contact-form{
+        background-color: #000;
+        margin-top: 30%;
+    }
+    .form-control{
+        font-size: 28px;
+        font-weight: 600;
+        width: 70rem;
+    }
+    .contact-form h3{
+        font-size: 36px;
+    }
+}
+
+@media (min-width:1300px){
+    .contact-form{
+        background-color: #111111;
+        margin-top: 20%;
+        width: 90%;
+    }
+    .form-control{
+        font-size: 28px;
+        font-weight: 600;
+        width: 70rem;
+        height: 3rem;
+    }
+    .contact-form h3{
+       
+        font-size: 40px;
+    }.contact-form .btnContact{
+        font-size: 30px;
+        width: 30rem;
+        height: 5rem;
+    }
+    label{
+        font-size: 34px;
+    }
+    .contact-form img{
+        width: 9%;
+        border-radius: 8rem;
+    }
+}
+@media (min-width:1500px)
+{
+    .contact-form{
+        width: 140rem;
+        margin-top: 6%;
+    }
+    .contact-form h3{
+        font-size: 50px;
+    }
+    .form-control{
+        width:20rem;
+    }
+
+}
+

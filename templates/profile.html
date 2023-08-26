@@ -1,0 +1,116 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<header class="masthead" style="background-image: url('{{ url_for('static', filename='img/profile.webp') }}')">
+  <div class="overlay"></div>
+  <div class="container-image-fluid">
+   
+        <div class="site-heading">
+          <h1>{{user.username}}</h1>
+          <span class="subheading">Joined on {{user.date}}</span>
+          
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+    
+    <!-- Main Content -->
+  <body>
+    <link href="{{ url_for('static', filename='css/for_account.css') }}" rel="stylesheet">
+    <div class="container-des">
+      
+    
+   
+    <p>Description</p>
+    
+      
+<div>
+  <form  action = "/profile" method="post" >
+
+  
+    <div class="control-group">
+      <div class="form-group floating-label-form-group controls">
+      
+        <textarea rows="8" class="form-control" name = "descrip" id="descrip"style="font-size:32px;font-family:cursive" >
+          {{user.description}}</textarea>
+       
+      </div>
+    </div>
+
+      <button type="submit" class="btn btn-primary" value="Add post" id="sendMessageButton">Submit</button>
+
+
+
+
+
+
+
+
+
+      
+  </form>
+</div>
+
+  <br>
+  <div class="badge bg-dark text-wrap" id="uid">
+    SPI : {{user.id}}
+  </div>
+    
+  </div>
+  <hr>
+  <hr>
+  <div class="container-post-profile">
+    <h2> Intellects</h2>
+      
+          
+          <div class="form-group">
+                            <a type="submit" name="btnSubmit" class="btnContact" href="/add_post" >
+                              <div class="but-add">Add Post</div></a>
+                        </div>
+          <br>
+          <br>
+       
+    </br>
+    {% if posts_of_user %}
+        {% for post_of_user in posts_of_user %}
+        <div class="post-preview">
+          <br>
+              <div class="post-title">{{ post_of_user.title }}
+              </div>
+            <p class="post-meta">➔ Thinking of you
+            
+              on {{post_of_user.date}}</p>
+          <div class="content-prof" >{{post_of_user.content[0:300]}}...</div>
+        </br> 
+      </br>
+        <div class="buttons">
+      <a class="btn btn-dark "href="/individual_post/{{post_of_user.slug}}" role="button">
+        <div class="text-2">View</div></a>
+      <a class="btn btn-warning" href="/individual_post/edit/{{post_of_user.sno}}" role="button">
+        <div class="text-2">Edit</div></a>
+   
+        </div>
+    <br>
+        </div>
+     <br>
+     <br>
+      
+ 
+        {% endfor %}
+        {% else %}
+        <h3>NO thinking yet</h3>
+        {% endif %}
+
+
+        </div>
+     
+  </body>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+{% endblock %}
+    

@@ -1,0 +1,255 @@
+body {
+    background-color: #eee;
+    
+}
+
+.bdge {
+  height: 21px;
+  background-color: orange;
+  color: #fff;
+  font-size: 11px;
+  padding: 8px;
+  border-radius: 4px;
+  line-height: 3px;
+}
+
+.comments {
+  text-decoration: underline;
+  text-underline-position: under;
+  cursor: pointer;
+}
+
+.dot {
+  height: 7px;
+  width: 7px;
+  margin-top: 3px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.hit-voting:hover {
+  color: blue;
+}
+
+.hit-voting {
+  cursor: pointer;
+}
+
+
+.cont-com{
+    background-color: aqua;
+    float:right;
+    max-height: 1800px;
+    height: 100%;
+    position: fixed;
+    margin-left: 250px;
+}
+.comments{
+   
+    background-color: azure;
+    margin-right: 710px;
+
+  
+}
+.container-com{
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.container-1{
+   
+    box-shadow: 12px 12px 5px rgb(149, 147, 147);
+      max-width:1200px ;
+   
+    background-color: #fafafb;
+   border-radius: 9px;
+  
+  margin-left: 300px;
+  margin-bottom: 20px;
+    } 
+    .container-1:hover{
+      border-radius: 9px;
+    box-shadow:  10px 10px 5px rgb(108, 159, 176);
+      max-width: 1200px;
+    background-color: #141313;
+       margin-left: 300px;
+       transition: 0.6s;
+       margin-bottom: 20px;
+    }
+    .container-all{
+      background-color: #ddae14;
+    }
+    .container-2{
+     
+      border-radius: 9px;
+      
+    box-shadow:  12px 12px 5px rgb(108, 159, 176);
+      max-width: 1200px;
+    background-color: #141313;
+       margin-left: 750px;
+      margin-bottom: 20px;
+     
+    }
+    .container-2:hover{
+    
+      box-shadow: 10px 10px 5px rgb(149, 147, 147);
+        max-width:1200px ;
+    
+      background-color: #fafafb;
+     border-radius: 9px;
+      margin-left: 750px;
+      transition: 0.4s;
+      margin-bottom: 20px;
+      } 
+      /* for user*/
+      #user-info-1{
+    position: absolute;
+      margin-right:400px ;
+      margin-left: 50px;
+      height: 200px;
+      width: 310px;
+      right: 0;
+    
+      }
+      #user-info-2{
+       
+        position: absolute;
+        margin-left:490px ;
+        margin-right: 50px;
+        height: 200px;
+        width: 310px;
+        left: 0;
+       
+        }
+        #username-1{
+          margin-top: 15px;
+       font-family: Perpetua;
+       font-weight: 800;
+          font-size: 24px;
+          letter-spacing: 1px;
+          margin-bottom: 8px;
+        
+        }
+        #logo-1{
+        opacity: 10;
+      margin-left: 10px;
+    
+        }
+    #uid-1 a {
+     font-size: 30px;
+     font-weight: 800;
+     text-decoration: none;
+     color: #000;
+    }
+        #username-2{
+          margin-top: 15px;
+          font-family: Perpetua;
+          font-weight: 800;
+          font-size: 24px;
+          font-weight: 700;
+          margin-left: 5px;
+          letter-spacing: 1px;
+          margin-bottom: 8px;
+        }
+        #logo-2{
+        opacity: 10;
+        margin-left: 10px;
+        }
+    #uid-2 a{
+     font-size: 30px;
+     font-weight: 800;
+     text-decoration: none;
+     color: #000;
+     cursor: pointer;
+    }
+  
+  
+  
+      header.masthead .post-heading h1
+          {font-size:35px}header.masthead .post-heading .meta,header.masthead .post-heading .subheading
+          {line-height:1.1;display:block;text-decoration: none;}
+          header.masthead .post-heading .subheading
+          {font-size:24px;font-weight:600;margin:10px 0 30px;font-family:'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif}
+          header.masthead .post-heading .meta
+          {font-size:29px;font-weight:400;font-style:italic;font-family:Lora,'Times New Roman',serif}
+          header.masthead .post-heading .meta a
+          {color:#5c1e1e}
+          @media only screen and (min-width:768px)
+          {body.masthead .post-heading h1{font-size:55px;text-decoration:none}
+          header.masthead .post-heading .subheading{font-size:30px}}
+          .post-preview-1>a{color:#ddae14}.post-preview-1>.post-preview-1>a:hover{text-decoration:none;color:rgb(rgb(165, 74, 74), rgb(23, 23, 19), rgb(43, 102, 145))}
+          .post-preview-1>a>.post-title-1
+          {text-decoration:none;font-size:44px;margin-left:25px;font-weight:800;font-family:Miligran Sans;margin-bottom:10px;}
+  
+          .post-preview-2>a{color:#0fccf1}.post-preview-2>.post-preview-2>a:hover{text-decoration:none;color:rgb(rgb(165, 74, 74), rgb(23, 23, 19), rgb(43, 102, 145))}
+          .post-preview-2>a>.post-title-2
+          {text-decoration:none;font-size:44px;margin-left:25px;font-weight:800;font-family:Miligran Sans;margin-bottom:10px;}
+  
+          .post-preview-1>a>.post-subtitle-1{font-weight:500;margin:12 0 10px}
+          .post-meta-1
+          {font-size:18px;margin-left:40px;font-weight:500;font-style:italic;margin-top:18px;color:#0e0d0d}
+          .container-1:hover .post-meta-1
+          {font-size:18px;margin-left:40px;font-weight:500;font-style:italic;margin-top:18px;color:#fbfbfb}
+         
+  
+          .post-preview-2>a>.post-subtitle-2{font-weight:500;margin:12 0 10px}
+          .post-meta-2
+          {font-size:18px;margin-left:40px;font-weight:500;font-style:italic;margin-top:18px;color:#f9fbfc}
+         .container-2:hover .post-meta-2
+          {font-size:18px;margin-left:40px;font-weight:500;font-style:italic;margin-top:18px;color:#0e0d0d}
+        
+  
+   .content-1{
+          line-height: 1.2;
+         font-size: 27px;
+         margin-top: 20px;
+         margin-left:65px ;
+       font-weight: 500;
+       margin-bottom: 10px;
+       margin-right: 50px;
+       color:#131313
+          }
+   .container-1:hover       .content-1{
+            color: white;
+            line-height: 1.2;
+           font-size: 27px;
+           margin-top: 20px;
+           margin-left:65px ;
+         font-weight: 400;
+         margin-bottom: 10px;
+         margin-right: 50px;
+  
+            }
+          .content-2{
+              color: white;
+              line-height: 1.2;
+             font-size: 27px;
+             margin-top: 20px;
+             margin-left:65px ;
+           font-weight: 400;
+           margin-bottom: 10px;
+           margin-right: 50px;
+  
+              }
+     .container-2:hover         .content-2{
+                line-height: 1.2;
+               font-size: 27px;
+               margin-top: 20px;
+               margin-left:65px ;
+             font-weight: 500;
+             margin-bottom: 10px;
+             margin-right: 50px;
+             color:#131313
+                }
+              
+             
+                .container-waterflow{
+                  height: 100%;
+                  width:150px;
+                 position: fixed;
+             z-index:1;
+                background-color:rgb(255, 160, 131);
+              }
+             
+                 

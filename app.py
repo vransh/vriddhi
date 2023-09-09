@@ -13,15 +13,15 @@ import random
 from werkzeug.security import check_password_hash,generate_password_hash
 import os
 
-with open(r'C:\Users\Dell\ansh\innovate_app\templates\configure.json', 'r') as c:
-    params = json.load(c)["params"]
+
+
 
 app = Flask(__name__)
 
 
 
 
-app.config['SQLALCHEMY_DATABASE_URI']=params['local_uri']
+app.config['SQLALCHEMY_DATABASE_URI']='postgresql://vriddhi_database_user:5n3Qb5hELJCSiJEitwJkCnvmyhMCbPf7@dpg-cjtgkhnhdsdc73ammhe0-a.oregon-postgres.render.com/vriddhi_database'
 app.config['SECRET_KEY']='superfeifj43uhf&^Uhajhwefi43y7rf43iday898&98'
 #postgresql://vriddhi_database_user:5n3Qb5hELJCSiJEitwJkCnvmyhMCbPf7@dpg-cjtgkhnhdsdc73ammhe0-a.oregon-postgres.render.com/vriddhi_database
     
@@ -77,7 +77,7 @@ class Posts(db.Model,UserMixin):
 
 @app.route("/")
 def create():
-    return render_template('index.html',params=params)
+    return render_template('index.html')
 
 @app.route("/home",methods=['GET','POST'])
 
@@ -97,7 +97,7 @@ def home():
             return redirect('/user_account/'+id)  
     posts= Posts.query.all()
 
-    return render_template('home.html', params=params,posts=posts,index=index)
+    return render_template('home.html',posts=posts,index=index)
  else:
   return redirect('/signin')
      
@@ -139,7 +139,7 @@ def craccount():
       else:
           flash('Both password fields must match')
           return redirect('/new_account')
- return render_template("new_account.html",params=params)
+ return render_template("new_account.html")
 
 @app.route("/signin",methods=['GET','POST'])
 def dash_route():
@@ -165,7 +165,7 @@ def dash_route():
                   flash('Individual, Please enter the correct details !')
                   return redirect('/signin')
          
-         return render_template("signin.html",params=params,myemail=myemail)
+         return render_template("signin.html",myemail=myemail)
  
 @app.route("/add_post" ,methods = ['GET', 'POST'])
 
@@ -186,7 +186,7 @@ def add_post():
             db.session.add(post)
             db.session.commit()
             return redirect('/profile')
-    return render_template('add_post.html', params=params)
+    return render_template('add_post.html')
 
 @app.route("/individual_post/edit/<int:sno>" ,methods = ['GET', 'POST'])
 
@@ -205,7 +205,7 @@ def edit_post(sno):
        
             db.session.commit()
             return redirect('/profile')
-    return render_template('edit.html', params=params,post=post)
+    return render_template('edit.html',post=post)
 
 
 #@app.route('/individual_post/delete/<int:id>')  
@@ -220,7 +220,7 @@ def edit_post(sno):
 def post_route(post_slug):
     post=Posts.query.filter_by(slug=post_slug).first()
         
-    return render_template('individual_post.html', params=params, post=post)
+    return render_template('individual_post.html',  post=post)
 
 
 @app.route("/profile",methods=['GET','POST'])
@@ -235,7 +235,7 @@ def profile():
                
                 db.session.commit()
                 return redirect('/profile')
-    return render_template("profile.html",params=params,user=user,posts_of_user=posts_of_user)
+    return render_template("profile.html",user=user,posts_of_user=posts_of_user)
 
 
 @app.route('/user_account/<string:id>', methods=['GET','POST'])
@@ -252,7 +252,7 @@ def Account_route(id):
                 user.description = request.form.get('descrip')
             
         
-    return render_template('user_account.html', params=params,id=id,user=user,posts_of_user=posts_of_user)
+    return render_template('user_account.html',id=id,user=user,posts_of_user=posts_of_user)
 @app.route('/searched', methods=['POSt'])
 def search():
     index=1
@@ -267,14 +267,14 @@ def search():
         posts=posts.order_by(Posts.title).all()
     
        #return redirect('/searched')
-       return render_template('search.html',posts=posts,index=index,params=params,searched=searched)
+       return render_template('search.html',posts=posts,index=index,searched=searched)
 
 # community
 @app.route('/community')
 def community():
     index=1
     users=Comments.query.filter_by().all()
-    return render_template('community.html' ,parmas=params,users=users,index=index)
+    return render_template('community.html' ,users=users,index=index)
 @app.route('/about_me')
 def poste():
      

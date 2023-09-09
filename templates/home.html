@@ -1,24 +1,24 @@
 {% extends "layout.html" %}
 {% block body %}
-    <header class="masthead" >
-
   
-      <div class="overlay"></div>
-      <div class="container-image-fluid">
-       
-            <div class="site-heading">
-              <h1>V_ridDhᴉ</h1>
-              <div class="subheading">Be A Individual</div>
-          <div id="vedio">
-              <vedio autoplay loop muted >
-                <source src="{{ url_for('static', filename='img/vriddhi_vedio.mp4') }}" type="vedio/mp4">
-               </vedio>
-               </div>
-            </div>
-          </div>
-        </div>
+      
+
+ 
+<head>
+  <title>Vriddhi</title>
+  <link href="{{url_for('static', filename='css/for_home.css')}}" rel="stylesheet">
+ <!-- Include an external CSS file for styling -->
+</head>
+
+  <header>
+   
+      <div class="video-container">
+          <video autoplay muted loop>
+              <source src="{{ url_for('static', filename='img/vriddhi_vedio.mp4') }}" type="video/mp4">
+             
+          </video>
       </div>
-    </header>
+      </header>
     <body>
       <link href="{{ url_for('static', filename='css/for_home.css') }}" rel="stylesheet">
       <div class="animation"></div>

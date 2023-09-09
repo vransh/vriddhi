@@ -13,8 +13,8 @@ import random
 from werkzeug.security import check_password_hash,generate_password_hash
 import os
 
-with open(r'C:\Users\Dell\ansh\innovate_app\templates\configure.json.load(c)["params"]
-
+with open(r'C:\Users\Dell\ansh\innovate_app\templates\configure.json', 'r') as c:
+    params = json.load(c)["params"]
 
 app = Flask(__name__)
 

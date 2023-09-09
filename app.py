@@ -13,7 +13,7 @@ import random
 from werkzeug.security import check_password_hash,generate_password_hash
 import os
 
-with open(r'innovate_app/templates/configure.json', 'r') as c:
+with open(r'C:/Users/Dell/ansh/innovate_app/templates/configure.json', 'r') as c:
     params = json.load(c)["params"]
 
 

@@ -112,25 +112,23 @@ def home():
 def craccount():
 
  if request.method=='POST':
-    user = Comments.query.filter_by(email=request.form.get('email')).first()
-    if user:
-      flash('Individual, this email is already registered !')
-      return redirect('/new_account')
-    else:
+   # user = Comments.query.filter_by(email=request.form.get('email')).first()
+  #  if user:
+     # flash('Individual, this email is already registered !')
+      #return redirect('/new_account')
+   # else:
       username=request.form.get('username')
       email=request.form.get('email')
       password=request.form.get('password')
       c_pass=request.form.get('cpass')
-      for i in range(1,10):
-        id=random.randint(1000,10000)
-        if not Comments.query.filter_by(id=id).first():
-           uid=id
-           break
+      id=random.randint(1000,10000)
+       
+     
         
            
       if c_pass==password:
           hash_pass=generate_password_hash(c_pass,"sha256")
-          user = Comments(username=username, email=email,password=hash_pass,id=uid,date=datetime.now())
+          user = Comments(username=username, email=email,password=hash_pass,id=id,date=77)
           db.session.add(user)
           db.session.commit()
           session['email']=email

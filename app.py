@@ -127,8 +127,8 @@ def craccount():
         
            
       if c_pass==password:
-          hash_pass=generate_password_hash(c_pass,"sha256")
-          user = Comments(username=username, email=email,password=hash_pass,id=id,date=77)
+          3hash_pass=generate_password_hash(c_pass,"sha256")
+          user = Comments(username=username, email=email,password=8888,id=id,date=77)
           db.session.add(user)
           db.session.commit()
           session['email']=email

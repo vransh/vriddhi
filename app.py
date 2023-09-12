@@ -20,7 +20,7 @@ app = Flask(__name__)
 
 
 
-app.config['SQLALCHEMY_DATABASE_URI']= os.environ.get("DATABASE_URL")
+app.config['SQLALCHEMY_DATABASE_URI']= 'postgresql://vriddhi_database_6e3c_user:fN0x4D5jSv7V1d2hg1V1527qGuIEzi5q@dpg-cjvbkc15mpss73f4g4s0-a/vriddhi_database_6e3c'
 app.config['SECRET_KEY']='superfeifj43uhf&^Uhajhwefi43y7rf43iday898&98'
 #postgresql://vriddhi_database_user:5n3Qb5hELJCSiJEitwJkCnvmyhMCbPf7@dpg-cjtgkhnhdsdc73ammhe0-a.oregon-postgres.render.com/vriddhi_database
     

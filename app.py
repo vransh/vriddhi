@@ -167,7 +167,7 @@ def dash_route():
 @app.route("/add_post" ,methods = ['GET', 'POST'])
 
 def add_post():
-    user_id_of_user=Comments.query.filter_by(email=session['email']).first()
+   # user_id_of_user=Comments.query.filter_by(email=session['email']).first()
     if request.method == 'POST':
             #user=current_user.sno
             box_title = request.form.get('title')

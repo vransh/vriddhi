@@ -39,7 +39,7 @@ class Comments(db.Model,UserMixin):
     sno = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50), nullable=False)
     description=db.Column(db.String(500),default="You can easily fill this.")
-    mine=db.relationship('Posts',backref="user")
+   # mine=db.relationship('Posts',backref="user")
     password = db.Column( nullable=False)
     email = db.Column(db.String(50), nullable=False,unique=True)
     img_file = db.Column(db.String(500), nullable=True)
@@ -69,7 +69,7 @@ class Posts(db.Model,UserMixin):
     slug = db.Column(db.String(20), nullable=False)
     content = db.Column(db.String(120), nullable=False)
    # post = db.relationship('Reviews', backref=db.backref('posts_rev'))
-    user_id = db.Column(db.Integer, db.ForeignKey('comments.sno', ondelete='CASCADE'))
+    #user_id = db.Column(db.Integer, db.ForeignKey('comments.sno', ondelete='CASCADE'))
     date = db.Column(db.String(12), nullable=True)
     
 
@@ -174,7 +174,7 @@ def add_post():
             #tline = request.form.get('tline')
             category = request.form.get('category')
             content = request.form.get('content')
-            user = user_id_of_user.sno
+           # user = user_id_of_user.sno
            
            
           

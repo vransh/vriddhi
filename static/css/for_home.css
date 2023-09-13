@@ -20,6 +20,38 @@ h4{
   margin-left: 500px;
  
 }
+/*for vedio*/
+body, header {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the header with a background color and text color */
+header {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+ 
+}
+
+/* Style the video container to make it full-width and responsive */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+
+}
+
+/* Style the video to cover the entire container */
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+width:100%;
+  height: 100%;
+}
+
 header.masthead
 {background:no-repeat center center;background-color:#64696d
     ;margin-top:0px;height:35rem;padding-top:20px;width:100%;backface-visibility: visible;background-size: cover;}

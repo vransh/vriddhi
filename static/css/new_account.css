@@ -17,45 +17,11 @@
 /* for intro*/
 html, body {
     height: 100%;
-    background:linear-gradient(#bdc3c7,#2c3e50);;
+    background:linear-gradient(240deg, #bdc3c7,#2e3c50);;
     overflow: hidden;
 }
-.page-heading  h1{
-    font-size: 80px;
-    text-align: center;
-    font-weight: 800;
-    margin-top: 40%;
-    
-   
-}.subheading{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   
-    text-align: center;
-    margin-top: 20%;
-    font-size: 40px;
-    font-weight: 700;
 
-}
-#intro_but{
-    font-size: 28px;
-    font-weight: 600;
-    margin-top: 8%;
-    margin-left: 4%;
-    color:black;
-    background: linear-gradient(#ffc3a0,#ffafbd);
-    border-radius: 6px;
-}
-span{
-    color:#00B5Ec;
-    font-weight: 600;
-}
-.masthead {
-   
-     height: 100%;
-     background:#f2f0f0 url(../../static/img/tommorow.jpg);
-     background-size:cover;
-    
-   }
+
 
 .form-holder {
     max-width: 400px;
@@ -70,7 +36,7 @@ span{
 }
 
 .form-holder .form-content {
-  
+  background:  (110deg,#2193b0,#6dd5ed);
     text-align: center;
     display: -webkit-box;
     display: -moz-box;
@@ -86,7 +52,7 @@ span{
 
 .form-content .form-items {
     border: 3px solid #fff;
-  
+   
     display: inline-block;
     width: 200px;
     min-width: 540px;
@@ -102,7 +68,7 @@ span{
     color:black;
     font-family:fantasy;
     text-align: center;
-    font-size: 32px;
+    font-size: 40px;
     font-weight: 500;
     margin-bottom: 40px;
 
@@ -152,6 +118,8 @@ span{
     outline: none;
     border: 0px;
      box-shadow: none;
+     font-weight: 500;
+     letter-spacing: 1px;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active{
@@ -198,12 +166,13 @@ span{
 .valid-feedback{
    color: #2acc80;
 }
+
 @media (min-width:880px) {
     .illustration {
         text-align:center;
       
         font-size:100px;
-        color:#1368d8;
+        color:#d8d113;
       }
     #alert{
         background-color: #020202;
@@ -231,7 +200,7 @@ span{
         min-height: 600px;
 
         color:#121010;
-        background: linear-gradient(110deg,rgb(208, 159, 217),rgb(184, 156, 223),rgb(224, 215, 215));
+      
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         border-radius: 10px;
@@ -261,9 +230,12 @@ span{
 
 }
 @media (max-width:880px) {
-   .illustration{
-    display: none;
-   }
+    .illustration {
+        text-align:center;
+      margin-top: -8%;
+        font-size:70px;
+        color:#d1d813;
+      }
     #alert{
         background-color: #020202;
         font-size: 21px;
@@ -286,7 +258,7 @@ span{
         padding: 5%;
         display: inline-block;
         width: 90%;
-        background: linear-gradient(110deg,rgb(208, 159, 217),rgb(184, 156, 223),rgb(224, 215, 215));
+        
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         border-radius: 10px;
@@ -313,7 +285,10 @@ span{
     }
     
 
-}@media (max-width:570px) {
+}
+
+  
+@media (max-width:570px) {
     .form-holder {
         margin-left: 46%;
      
@@ -334,7 +309,7 @@ span{
     .form-content .form-items {
         border: 5px solid #f9f9f9;
         padding-right: -20px;
-        background: linear-gradient(110deg,rgb(208, 159, 217),rgb(184, 156, 223),rgb(224, 215, 215));
+        
         display: inline-block;
         max-width: 400px;
       min-width: 380px;
@@ -386,7 +361,7 @@ span{
     .form-content .form-items {
         border: 3px solid #fff;
         padding-right: 18px;
-        background: linear-gradient(110deg,rgb(208, 159, 217),rgb(184, 156, 223),rgb(224, 215, 215));
+       
         display: inline-block;
         width: 10%;
       max-width: 400px;

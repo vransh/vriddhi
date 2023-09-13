@@ -94,11 +94,61 @@ input, select {
 }
 
 /*for mine*/
-
+*, body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* for intro*/
+html, body {
+    height: 100%;
+    background:linear-gradient(#bdc3c7,#2c3e50);;
+    overflow: hidden;
+}
 #photu
-{background:no-repeat center center;background-color:#f6f4f4
-    ;margin-top:120px;min-height: 1000px;height:100% ;width:100%;backface-visibility: visible;background-size: cover;}
+{background:no-repeat;background-color:#f6f4f4
+    ;height:100% ;width:100%;background-size: cover;}
+   
+   
+    .page-heading  h1{
+        font-size: 80px;
+     text-align: center;
+        font-weight: 800;
+        margin-top: 40%;
+        
+       
+    }.subheading{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       
+        text-align: center;
+        margin-top: 20%;
+        font-size: 40px;
+        font-weight: 700;
+    
+    }
+    #intro_but{
+        font-size: 28px;
+        font-weight: 700;
+        margin-top: 8%;
+        margin-left: 4%;
+        color:black;
+        background: linear-gradient(#ffc3a0,#ffafbd);
+        border-radius: 6px;
+    }
+    span{
+        color:#00B5Ec;
+        font-weight: 600;
+    }
+    @media (max-width:750px)
+    {
+        .page-heading{
+            margin-top: 60%;
+        }
+        .page-heading h1{
+          padding-right: 30px;
+        
+        }
+    }
 
- .subheading{
-    font-size: 35px;
- }

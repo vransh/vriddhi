@@ -113,10 +113,10 @@ html, body {
    
    
     .page-heading  h1{
-        font-size: 80px;
+        font-size: clamp(80px,5vw,100px);
      text-align: center;
         font-weight: 800;
-        margin-top: 40%;
+        margin-top: clamp(40%,1vw,48%);
         
        
     }.subheading{
@@ -124,12 +124,12 @@ html, body {
        
         text-align: center;
         margin-top: 20%;
-        font-size: 40px;
+        font-size: clamp(35px,10vw,50px);
         font-weight: 700;
     
     }
     #intro_but{
-        font-size: 28px;
+        font-size:clamp(24px,5vw,28px);
         font-weight: 700;
         margin-top: 8%;
         margin-left: 4%;
@@ -140,15 +140,5 @@ html, body {
     span{
         color:#00B5Ec;
         font-weight: 600;
-    }
-    @media (max-width:750px)
-    {
-        .page-heading{
-            margin-top: 60%;
-        }
-        .page-heading h1{
-          padding-right: 30px;
-        
-        }
     }
 

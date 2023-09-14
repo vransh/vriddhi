@@ -68,24 +68,15 @@ html, body {
     color:black;
     font-family:fantasy;
     text-align: center;
-    font-size: 40px;
+    font-size: clamp(35px,5vw,50px);
     font-weight: 500;
     margin-bottom: 40px;
 
 }
 
-.form-content h3.form-title {
-    margin-bottom: 10px;
-}
 
-.form-content p {
-    color: #e9e6e6;
-    text-align: left;
-    font-size: 22px;
-    font-weight: 300;
-    line-height: 20px;
-    margin-bottom: 30px;
-}
+
+
 
 
 .form-content label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
@@ -129,49 +120,17 @@ html, body {
      box-shadow: none;
 }
 
-.form-content textarea {
-    position: static !important;
-    width: 100%;
-    padding: 8px 20px;
-    border-radius: 6px;
-    text-align: left;
-    background-color: #683131;
-    border: 0;
-    font-size: 15px;
-    font-weight: 300;
-    color: #8D8D8D;
-    outline: none;
-    resize: none;
-    height: 120px;
-    -webkit-transition: none;
-    transition: none;
-    margin-bottom: 14px;
-}
 
-.form-content textarea:hover, .form-content textarea:focus {
-    border: 0;
-    background-color: #ebeff8;
-    color: #030303;
-}
 
-.mv-up{
-    margin-top: -9px !important;
-    margin-bottom: 8px !important;
-}
 
-.invalid-feedback{
-    color: #ff606e;
-}
 
-.valid-feedback{
-   color: #2acc80;
-}
+
 
 @media (min-width:880px) {
     .illustration {
         text-align:center;
       
-        font-size:100px;
+        font-size:90px;
         color:#d8d113;
       }
     #alert{
@@ -342,7 +301,7 @@ html, body {
 }
 @media (max-width:400px) {
     .form-holder {
-        margin-left: 36%;
+        margin-left: 34%;
      
         width: 100px;
           

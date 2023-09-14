@@ -10,7 +10,7 @@
 .illustration {
     text-align:center;
   
-    font-size:100px;
+    font-size:clamp(70px,8vw,100px);
     color:#1368d8;
   }
 *, body {
@@ -24,21 +24,21 @@
 .forgot {
     display:block;
     text-align:center;
-    font-size:16px;
+    font-size:clamp(15px,3vw,18px);
     font-weight: 600;
     color:#32d1c4;
     opacity:2;
     text-decoration:none;
   }
   span{
-    font-size: 20px;
+    font-size: clamp(16px,3vw,21px);
     text-decoration: none;
     color:rgb(255, 255, 255)
   }
   .forgot:hover {
     display:block;
     text-align:center;
-    font-size:16px;
+    font-size:clamp(15px,3vw,18px);
     font-weight: 600;
     color:#32d1c4;
     opacity:2;
@@ -50,27 +50,7 @@ html, body {
     background: linear-gradient(240deg, #544a7d,#ffd452);
     overflow: hidden;
 }
-.page-heading{
-    font-size: 32px;
-    text-align: center;
-    
-   
-}.subheading{
-    font-family: cursive;
-    font-weight: 600;
-    text-align: center;
-    margin-top: 90%;
 
-  
-   
-}
-.masthead {
-   
-     height: 100%;
-     background:#f2f0f0 url(../../static/img/tommorow.jpg);
-     background-size:cover;
-    
-   }
 
 .form-holder {
     max-width: 400px;
@@ -117,24 +97,13 @@ h3 {
     color: white;
     font-family:fantasy;
     text-align: center;
-    font-size: 32px;
+    font-size: clamp(26px,4vw,32px);
     font-weight: 500;
     margin-bottom: 40px;
 
 }
 
-.form-content h3.form-title {
-    margin-bottom: 10px;
-}
 
-.form-content p {
-    color: #e9e6e6;
-    text-align: left;
-    font-size: 22px;
-    font-weight: 300;
-    line-height: 20px;
-    margin-bottom: 30px;
-}
 
 
 .form-content label, .was-validated .form-check-input:invalid~.form-check-label, .was-validated .form-check-input:valid~.form-check-label{
@@ -180,35 +149,7 @@ h3 {
      box-shadow: none;
 }
 
-.form-content textarea {
-    position: static !important;
-    width: 100%;
-    padding: 8px 20px;
-    border-radius: 6px;
-    text-align: left;
-    background-color: #683131;
-    border: 0;
-    font-size: 15px;
-    font-weight: 300;
-    color: #8D8D8D;
-    outline: none;
-    resize: none;
-    height: 120px;
-    -webkit-transition: none;
-    transition: none;
-    margin-bottom: 14px;
-}
 
-.form-content textarea:hover, .form-content textarea:focus {
-    border: 0;
-    background-color: #ebeff8;
-    color: #030303;
-}
-
-.mv-up{
-    margin-top: -9px !important;
-    margin-bottom: 8px !important;
-}
 
 
 @media (min-width:880px) {
@@ -311,7 +252,7 @@ h3 {
 
 }@media (max-width:570px) {
     .form-holder {
-        margin-left: 46%;
+        margin-left: 45%;
      
         width: 10%;
           
@@ -352,7 +293,7 @@ h3 {
 }
 @media (max-width:400px) {
     .form-holder {
-        margin-left: 36%;
+        margin-left: 38%;
      
         width: 100px;
           
@@ -366,8 +307,7 @@ h3 {
     .form-content .form-items {
        
         padding-right: 18px;
-        background: black;
-        display: inline-block;
+      
         width: 10%;
       max-width: 400px;
       min-width: 300px;
@@ -379,25 +319,14 @@ h3 {
       max-width: 700px;
         padding: 9px 20px;
         text-align: left;
-        border: 2px solid #f9f9f9;
-        border-radius: 6px;
-      background-color: none;
+      
         font-size: 15px;
         font-weight: 700;
-        color: whitesmoke;
-        -webkit-transition: all 0.3s ease;
-        transition: all 0.3s ease;
+     
         margin-top: 4%;
     }
     
-    .form-content h3 {
-        color: #ffffff;
-        text-align: center;
-        font-size: 32px;
-        font-weight: 500;
-        margin-bottom: 20px;
-    
-    }
+  
 
 }
 

@@ -128,11 +128,11 @@ body{
 /* footer */
 .cont-footer{
 position: fixed;
-background:linear-gradient(190deg,#000000,#434343);
+background:linear-gradient(190deg,#434343,#000000);
 bottom: 0;
 left: 0;
 margin-top: 50px;
-  z-index: -4;
+  z-index: -1;
  width: 100%;
  text-align: center;
  height: clamp(70px,4vh,90px);
@@ -239,7 +239,7 @@ line-height: 30px;
 #icon-s{
   font-size: clamp(30px,3vw,37px);
  margin-right: 60%;
- margin-top: 26px;
+ margin-top: 22px;
 }
 .wrapper .search-box{
   position: absolute;

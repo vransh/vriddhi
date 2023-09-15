@@ -17,7 +17,7 @@ header {
 .video-container {
   position: relative;
   width: 100%;
-  height: clamp(200px,25vw,500px);
+  height: clamp(270px,25vw,500px);
 
 }
 
@@ -296,7 +296,7 @@ margin-bottom: 20px;
                 width:11%;
                position: fixed;
            z-index:-2;
-              background:linear-gradient(90deg,#000000,#434343)
+              background:linear-gradient(220deg,#000000,#434343)
             }
            
                

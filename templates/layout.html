@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.5, shrink-to-fit=no,maximum-scale=0.5">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75, shrink-to-fit=no,maximum-scale=0.75">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Vriddhi</title>
@@ -33,7 +33,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title> Vriddhi</title>
-      <link rel="stylesheet" href="style.css">
+     
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
     </head>
     <body>
@@ -45,7 +45,7 @@
           <div class="content">
           <div class="logo"><a href="#">Vriddhi</a></div>
             <ul class="links">
-              <li></li><img class="vriddhi_logo" src="{{url_for('static', filename='img/logo.jpg')}}" alt="" width="110" height="110"></li>
+              
               <li><a href="/home">Home</a></li>
               <li><a href="/about_me">Purpose</a></li>
               <li>
@@ -65,11 +65,44 @@
               </li>
               <li><a href="/community">IN_dividuals</a></li>
               <li id="logout"><a href="/logout">Logout</a></li>
-            </ul>
+              <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end" id="refbut-nav">
+                <!-- Facebook -->
+                <a
+                   class="btn btn-outline-light btn-floating m-1"
+                   class="text-white"
+                   role="button"
+                   ><i class="fab fa-facebook-f"></i
+                  ></a>
+    
+                <!-- Twitter -->
+                <a
+                   class="btn btn-outline-light btn-floating m-1"
+                   class="text-white"
+                   role="button"
+                   ><i class="fab fa-twitter"></i
+                  ></a>
+    
+                <!-- Google -->
+                <a href="https://google.com"
+                   class="btn btn-outline-light btn-floating m-1"
+                   class="text-white"
+                   role="button"
+                   ><i class="fab fa-google"></i
+                  ></a>
+    
+                <!-- Instagram -->
+                <a
+                   class="btn btn-outline-light btn-floating m-1"
+                   class="text-white"
+                   role="button"
+                   ><i class="fab fa-instagram"></i
+                  ></a>
+              </div>
+            </ul> 
           </div>
           <label for="show-search"  class="search-icon"><i class="fas fa-search" id="icon-s"></i></label>
           <form method ="post"action="/searched" class="search-box">
-            <input type="text" name="q" placeholder="Type Something to Search..." required>
+            <input type="text" name="q" placeholder=" Search..." required>
             <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
           </form>
         </nav>
@@ -99,11 +132,12 @@
               <a class="text-white" href="https://mdbootstrap.com/"
                  >Vriddhi</a
                 >
-            </div>
+               
             <!-- Copyright -->
           </div>
           <!-- Grid column -->
-
+         
+     </div>
           <!-- Grid column -->
           <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end" id="refbut">
             <!-- Facebook -->
@@ -149,8 +183,8 @@
 </div>
     </footer>
 
-  
-
+    <!-- Bootstrap core JavaScript -->
+   
   </body>
 
 </html>

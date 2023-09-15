@@ -95,56 +95,7 @@ input, select {
 
 
   /* my css  */
-  html {
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    text-size-adjust: 100%;
- }
-  body{
-    background-color: #ece4e4;
-    height: 100%;
-  }
 
-
-
-
-
-
-
-
-
-/* footer */
-.cont-footer{
-  position: fixed;
- background-color:brown;
- bottom: 0;
- left: 0;
-  margin-top: 50px;
-    z-index: 5;
-   width: 100%;
-   text-align: center;
-   height: 8%;
-  
-  }
- 
- 
-    
-
-.copyright {
-    font-size: 30px;
-    font-weight: 700;
-    margin-left: 25%;
-    margin-top: 2%;
-    margin-bottom: 1%;
-}
-#refbut{
-top:0;
-
-}
-.list-inline-item{
-    background-color: #080808;
-
-}
 
 
 /*nav try*/
@@ -156,11 +107,67 @@ top:0;
   text-decoration: none;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+html {
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+body{
+  background-color: #ece4e4;
+  height: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* footer */
+.cont-footer{
+position: fixed;
+background:linear-gradient(190deg,#000000,#434343);
+bottom: 0;
+left: 0;
+margin-top: 50px;
+  z-index: -4;
+ width: 100%;
+ text-align: center;
+ height: clamp(70px,4vh,90px);
+
+}
+
+
+  
+
+.copyright {
+  font-size: clamp(20px,4vw,30px);
+  font-weight: 700;
+  margin-left: 25%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  color:#cccccc
+}
+#refbut-nav{
+
+display: none;
+
+}
+#refbut{
+float:right;
+
+}
+.list-inline-item{
+  background-color: #ffffff;
+
+}
 .wrapper{
   background: linear-gradient(109.6deg, rgb(46, 49, 49) 11.2%, rgba(110,123,251,1) 91.1%);
   position: fixed;
   width: 100%;
-  height: 6%;
+  height: clamp(65px,6vw,80px);
   z-index: 10;
 }
 .wrapper nav{
@@ -180,11 +187,12 @@ nav .content .links{
   margin-left: 80px;
   display: flex;
   margin-top: 14px;
+  
 }
 .content .logo a{
   color: bisque;
-  font-size: 45px;
-  font-weight: 800;
+  font-size: clamp(30px,4vw,40px);
+  font-weight:800;
   text-decoration: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-top: 16px;
@@ -229,13 +237,13 @@ line-height: 30px;
 }
 
 #icon-s{
-  font-size: 37px;
+  font-size: clamp(30px,3vw,37px);
  margin-right: 60%;
- margin-top: 30px;
+ margin-top: 26px;
 }
 .wrapper .search-box{
   position: absolute;
-  height: 98%;
+  height: clamp(65%,3vw,98%);
   max-width: calc(100% - 50px);
   width: 90%;
   
@@ -250,13 +258,14 @@ line-height: 30px;
 .search-box input{
   width: 100%;
   height: 100%;
-  border: none;
+ 
   outline: none;
   font-size: 28px;
-  color: #fff;
+  color: #efe1e1;
   font-weight: 700;
-  background: #171c24;
+  background:rgb(23, 22, 22);
   padding: 0 100px 0 15px;
+  border-radius: 20px;
 }
 .search-box input::placeholder{
   color: #f2f2f2;
@@ -266,9 +275,9 @@ line-height: 30px;
   right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  line-height: 60px;
+  line-height: 0px;
   width: 70px;
-  background: #171c24;
+  background:rgb(23, 22, 22);
   border: none;
   outline: none;
   color: #fff;
@@ -323,20 +332,24 @@ line-height: 30px;
 
   margin-right: 35%;
  background: red;
+
   text-decoration: none;
 }
 .vriddhi_logo{
   display: none;}
 /* search Responsive code start */
 @media screen and (max-width: 1250px){
+ 
+
+  .content.logo a{
+    padding-bottom: 20px;
+  }
   .mb{
     display: none;}
-  .cont-footer{
-    height:8%;
-  }
+ 
   .copyright{
     margin-top: 3%;
-    font-size: 32px;
+   
   }
   .wrapper nav{
     max-width: 100%;
@@ -356,6 +369,23 @@ line-height: 30px;
   }
 }
 @media screen and (max-width: 1150px){
+ .cont-footer{
+  height:4%;
+ }
+ .copyright{
+  display: none;
+ }
+ #refbut{
+  display: none;
+ }
+
+
+
+ 
+
+  .wrapper{
+    padding-bottom: 10px;
+  }
   .vriddhi_logo{
     display: inline;
     background-color: #080808;
@@ -364,7 +394,8 @@ line-height: 30px;
     margin-left: 10%;
   }
   .copyright{
-    font-size: 28px;
+   
+    margin-left: 19%;
   }
   .wrapper .menu-icon{
     display: block;
@@ -385,27 +416,30 @@ line-height: 30px;
   nav .content .links{
     display: block;
     position: fixed;
-    background: #000000;
+    background:  linear-gradient(170.6deg, rgb(46, 49, 49) 11.2%, rgba(110,123,251,1) 91.1%);
     height: 100%;
-    width: 100%;
-    top: 83px;
+width:clamp(280px,2vw,350px);
+  
+  top:51px;
     left: -100%;
     margin-left: 0;
-    max-width: 350px;
+    
     overflow-y: auto;
-    padding-bottom: 100px;
+    padding-bottom: 80px;
     transition: all 0.3s ease;
   }
   nav #show-menu:checked ~ .content .links{
     left: 0%;
+  
   }
+  
   .content .links li{
     margin: 15px 20px;
   }
   .content .links li a,
   .content .links li label{
-    line-height: 40px;
-    font-size: 26px;
+    line-height: 24px;
+   font-size: clamp(24px,5vw,28px);
     display: block;
     padding: 8px 18px;
     cursor: pointer;
@@ -413,6 +447,7 @@ line-height: 30px;
   #menu{
     font-size: 24px;
   }
+ 
   .content .links li a.desktop-link{
     display: none;
   }
@@ -442,9 +477,13 @@ line-height: 30px;
 }
 @media screen and (max-width:740px){
   .copyright{
-    font-size: 24px;
-    margin-left: 2%;
+  
+    margin-left: 5%;
   }
+  .content.logo a{
+    font-weight: 600;
+  }
+
   .vriddhi_logo{
     display: inline;
     background-color: #080808;
@@ -458,19 +497,16 @@ line-height: 30px;
   .wrapper nav{
     padding: 0 10px;
   }
-  .content .logo a{
-    font-size: 37px;
-    font-weight: 600;
-  }
+ 
   .wrapper .search-box{
     max-width: calc(100% - 70px);
   }
-  .wrapper .search-box .go-icon{
-    width: 30px;
-    right: 0;
-  }
+ 
   .wrapper .search-box input{
-    padding-right: 30px;
+    padding-right: 20px;
+  }
+  .copyright{
+    margin-top: 2%;
   }
 }
 .dummy-text{

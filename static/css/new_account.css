@@ -301,7 +301,7 @@ html, body {
 }
 @media (max-width:400px) {
     .form-holder {
-        margin-left: 34%;
+        margin-left: 37%;
      
         width: 100px;
           
@@ -360,4 +360,8 @@ html, body {
     }
 
 }
-
+@media (max-width:300px){
+    .form-content{
+        margin-left: 49%;
+    }
+}

@@ -47,10 +47,12 @@
   
 html, body {
     height: 100%;
-    background: linear-gradient(240deg, #544a7d,#ffd452);
+  
     overflow: hidden;
 }
-
+#photu
+{background:no-repeat;background-color:#f6f4f4
+    ;height:100% ;width:100%;background-size: cover;}
 
 .form-holder {
     max-width: 400px;
@@ -137,7 +139,7 @@ h3 {
     border: 0px;
      box-shadow: none;
      margin-top: 5%;
-    font-size: 22px;
+    font-size: clamp(16px,4vw,22px);
     font-weight: 700;
   
 }
@@ -325,8 +327,8 @@ h3 {
      
         margin-top: 4%;
     }
+   
     
   
 
 }
-

@@ -38,25 +38,19 @@ width:100%;
 
 /* for search results*/
 .searched{
-  color:saddlebrown;
-  font-size: 50px;
+  color:brown;
+  font-size: clamp(25px,4vw,60px);
+  text-decoration: none;
 }
 h3{
-  margin-top: 40px;
-  font-size: 42px;
+  margin-top: clamp(20px,5vw,24px);
+  font-size: clamp(30px,4vw,65px);
   font-weight: 600;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin-left: 8%;
+  margin-left: 12%;
 
 }
-h4{
-  font-size: 40px;
-  font-weight: 400;
-  font-family: cursive;
-  font-style: italic;
-  margin-left: 500px;
- 
-}
+
 
 header.masthead
 {background:no-repeat center center;background-color:#64696d
@@ -66,16 +60,23 @@ header.masthead
     {padding:25px 0 150px;color:#3c4757}
     header.masthead .page-heading .subheading,header.masthead .site-heading .subheading
     {
-        font-size:35px;color: #ffffff;font-weight:620;line-height:1.1;display:block;
+        font-size:35px;font-weight:620;line-height:1.1;display:block;
         margin:19px 0 0;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
     }
 
-h1{
-    font-size: 90px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin-top: 40px;
-    color: #ffffff;
-}
+    h1{
+      font-size: clamp(48px,6vw,65px);
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      margin-bottom: 30px;
+      margin-top: 40px;
+     
+      color: honeydew;
+    }
+     .subheading{
+      font-size:clamp(30px,6vw,45px);
+    color: #F3BFB3;
+  }
+
 
 header.masthead .site-heading
 {text-align:center;padding-top: 140px;}
@@ -87,48 +88,31 @@ header.masthead .site-heading
 
 .container-1{
    
-  box-shadow: 12px 12px 5px rgb(149, 147, 147);
+  box-shadow: 5px 5px 9px rgb(149, 147, 147);
     max-width:82% ;
    
-  background-color: #fafafb;
+  background:linear-gradient(120deg,#0D324D,#b2d2ec);
  border-radius: 9px;
+overflow-wrap: break-word;
+margin-left: 13%;
+margin-bottom: 6%;
 
-margin-left: 9%;
-margin-bottom: 20px;
   } 
-  .container-1:hover{
-    border-radius: 9px;
-  box-shadow:  10px 10px 5px rgb(108, 159, 176);
-    max-width: 82%;
-  background-color: #141313;
-     margin-left: 9%;
-     transition: 0.6s;
-     margin-bottom: 20px;
-  }
+ 
 
   
   .container-2{
    
     border-radius: 9px;
-    
-  box-shadow:  12px 12px 5px rgb(108, 159, 176);
+    overflow-wrap: break-word;
+  box-shadow:  5px 5px 9px rgb(106, 106, 95);
     max-width:82%;
-  background-color: #141313;
+  background:linear-gradient(120deg,#0D324D,#131313);
      margin-left: 14%;
-    margin-bottom: 20px;
+ margin-bottom: 6%;
    
   }
-  .container-2:hover{
-  
-    box-shadow: 10px 10px 5px rgb(149, 147, 147);
-      max-width:82% ;
-  
-    background-color: #fafafb;
-   border-radius: 9px;
-    margin-left: 14%;
-    transition: 0.4s;
-    margin-bottom: 20px;
-    } 
+
     /* for user*/
     #user-info-1{
       z-index: 1;
@@ -164,7 +148,7 @@ margin-bottom: 20px;
        
            }
        #uid-1 a {
-        font-size: 30px;
+        font-size: clamp(18px,4vw,30px);
         font-weight: 800;
         text-decoration: none;
         color: #000;
@@ -184,7 +168,7 @@ margin-bottom: 20px;
            margin-left: 10px;
            }
        #uid-2 a{
-        font-size: 30px;
+        font-size: clamp(18px,4vw,30px);
         font-weight: 800;
         text-decoration: none;
         color: #000;
@@ -193,53 +177,44 @@ margin-bottom: 20px;
 
 
    .post-title-1{
-    font-size: 30px;
-    text-decoration:#5BA9BE underline;
+    font-size: clamp(20px,4vw,30px);
+    text-decoration:#BDD4E7 underline;
     margin-left: 2%;
-    margin-bottom: 12px;
-    color:#5EA9BE
-    
+    margin-bottom: 4px;
+    color:#BDD4E7;
+   padding-top: 2%;
     
    }
    .post-title-2{
-    font-size: 30px;
-    text-decoration:#F3BFB3 underline;
+    font-size: clamp(20px,4vw,30px);
+    text-decoration:#BDD4E7 underline;
     margin-left: 2%;
-    margin-bottom: 12px;
-    color:#F3BFB3
+    margin-bottom: 4px;
+    color:#BDD4E7;;
+   padding-top: 2%;
+  
    }
    .post-meta-1{
     margin-left: 5%;
-    font-size: 13px;
-    color:black;
-    font-weight: 700;
-   }
-   .container-1:hover .post-meta-1{
-    margin-left: 5%;
-    font-size: 13px;
+    font-size: 11px;
     color:white;
     font-weight: 700;
    }
+
    .post-meta-2{
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 700;
     margin-left: 5%;
     color: white;
    }
-   .container-2:hover .post-meta-2{
-    font-weight: 700;
-    font-size: 13px;
-    margin-left: 5%;
-    color: black;
-   }
+ 
    /*username*/
    span{
     text-decoration: salmon underline;
-    font-size: 20px;
+    font-size: clamp(14px,3vw,22px);
     margin-left: 3px;
  
-    margin-right: 3px;
-    color: salmon;
+    color:salmon;
 }
 
 
@@ -247,55 +222,35 @@ margin-bottom: 20px;
 
  .content-1{
         line-height: 1.0;
-       font-size: 20px;
-       margin-top: 20px;
+       font-size: clamp(15px,3vw,22px);
+       margin-top: 10px;
        margin-left:8% ;
      font-weight: 500;
      margin-bottom: 10px;
     margin-right: 3%;
-     color:#131313
+     color:white
         }
- .container-1:hover       .content-1{
-          color: white;
-          line-height: 1.0;
-         font-size: 20px;
-         margin-top: 20px;
-         margin-left:8% ;
-       font-weight: 400;
-       margin-bottom: 10px;
-       margin-right: 3%;
-      
 
-          }
         .content-2{
             color: white;
             line-height: 1.0;
-           font-size: 20px;
-           margin-top: 20px;
+           font-size: clamp(15px,3vw,22px);
+           margin-top: 10px;
            margin-left:8% ;
-         font-weight: 400;
+         font-weight: 500;
          margin-bottom: 10px;
          margin-right: 3%;
         
 
             }
-   .container-2:hover  .content-2{
-              line-height: 1.0;
-             font-size: 20px;
-             margin-top: 20px;
-             margin-left:8% ;
-           font-weight: 500;
-           margin-bottom: 10px;
-          margin-right: 3%;
-           color:#0e0d0d
-              }
+  
             
            
              .container-waterflow{
                 height: 100%;
                 width:11%;
                position: fixed;
-           z-index:-2;
+           z-index:5;
               background:linear-gradient(240deg,#434343,#000000)
             }
            
@@ -308,7 +263,7 @@ margin-bottom: 20px;
 .container-content{
   margin-left: 0%;
  
-
+overflow-wrap: break-word;
   margin-top: 50px;
   margin-bottom: 70px;
   border-radius: 8px;
@@ -319,21 +274,23 @@ margin-bottom: 20px;
   margin-bottom: 20px;
   margin-left: 15px;
   margin-right: 15px;
-  font-size: 22px;
+  font-size: clamp(24px,2vw,35px);
+  opacity: 10px;
  
-  font-family: Tahoma;
-text-transform:capitalize;
+  font-family: 'Lucida Sans';
+
 letter-spacing: 1px;
   font-weight: 800;
-  line-height: 40px;
+  line-height: 1.3;
 }
 .user-discuss{
   margin-left: 40%;
-  font-size: 17px;
+  font-size: clamp(21px,2vw,32px);
   font-weight: 700;
   text-align: end;
-  margin-top: 10px;
+  margin-top: 3%;
   margin-bottom: 10rem;
+  color:#494D5F
 }
 @media(min-width:340px){
   #user-info-1{
@@ -345,103 +302,44 @@ letter-spacing: 1px;
 }
 @media (min-width:480px){
   
-  .post-title-1{
-    font-size: 34px;
-  }
-  .post-title-2{
-    font-size: 34px;
-  }
+
   .post-meta-1{
-    font-size: 15px;
+    font-size: 11px;
   }
   .post-meta-2{
-    font-size: 15px;
+    font-size: 11px;
   }
-  .container-1:hover  .post-meta-1{
-    font-size: 15px;
-  }
-  .container-2:hover   .post-meta-2{
-    font-size: 15px;
-  }
-  span{
-    font-size: 24px;
-  }
-  .content-1{
-    font-size: 25px;
-  }
-  .content-2{
-    font-size: 25px;
-  }
-  .container-1:hover  .content-1{
-    font-size: 25px;
 
-  }
-  .container-2:hover  .content-2{
-    font-size: 25px;
-  }
-  .user-discuss{
-    font-weight: 900;
-    font-size: 17px;
-  }
+
+
+
 }
 @media (min-width:720px){
   
- .searched{
-  font-size: 65px;
- }
- h3{
-  font-size: 50px;
- }
-  .post-title-1{
-    font-size: 38px;
-  }
-  .post-title-2{
-    font-size: 38px;
-  }
+ 
+
+
   .post-meta-1{
     font-size: 18px;
   }
-  .container-1:hover  .post-meta-1{
-    font-size: 18px;
-  }
-  .container-2:hover   .post-meta-2{
-    font-size: 18px;
-  }
+ 
   .post-meta-2{
     font-size: 18px;
   }
-  span{
-    font-size: 24px;
-  }
-  .content-1{
-    font-size: 29px;
-  }
-  .content-2{
-    font-size: 29px;
-  }
-  .container-1:hover  .content-1{
-    font-size: 29px;
 
-  }
-  .container-2:hover  .content-2{
-    font-size: 29px;
-  }
-  .post-content{
-    font-size: 28px;
-    font-weight: 400;
-  }
+ 
+
+  
  
 }
 @media(min-width:870px){
  #logo-1{
   display: inline;
  }
-  .searched{
-    font-size: 80px;
-  }
-  h3{
-    font-size: 60px;
-  }
+ h3{
+  margin-left: 8%;
+}
+
  .container-waterflow{
   width:6%
  }
@@ -479,12 +377,7 @@ letter-spacing: 1px;
     
    
        }
-   #uid-1 a {
-    font-size: 26px;
-    font-weight: 800;
-    text-decoration: none;
-    color: #000;
-   }
+  
        #username-2{
          margin-top: 15px;
          font-family: Perpetua;
@@ -499,29 +392,17 @@ letter-spacing: 1px;
        opacity: 10;
        margin-left: 10px;
        }
-   #uid-2 a{
-    font-size: 26px;
-    font-weight: 800;
-    text-decoration: none;
-    color: #000;
-    cursor: pointer;
-}
+
 .container-1{
   margin-left: 7%;
 max-width: 70%;
 }
-.container-1:hover{
-  margin-left: 7%;
-max-width: 70%;
-}
+
 .container-2{
 margin-left: 26%;
 width: 69%;
 }
-.container-2:hover{
-margin-left: 26%;
-width: 69%;
-}
+
 
 .container-content{
   margin-left:5%;
@@ -548,54 +429,20 @@ span{
   #username-2{
     font-size: 26px;
   }
-  #uid-1 a{
-    font-size: 34px;
-  }
-  #uid-2 a{
-    font-size: 34px;
-  }
-  .post-title-1{
-    font-size: 42px;
-  }
-  .post-title-2{
-    font-size: 42px;
-  }
+ 
+
   .post-meta-1{
     font-size: 21px;
   }
-  .container-1:hover  .post-meta-1{
-    font-size: 21px;
-  }
-  .container-2:hover   .post-meta-2{
-    font-size: 21px;
-  }
+
   .post-meta-2{
     font-size: 21px;
   }
   span{
     font-size: 29px;
   }
-  .content-1{
-    font-size: 32px;
-  }
-  .content-2{
-    font-size: 32px;
-  }
-  .container-1:hover  .content-1{
-    font-size: 32px;
+  
 
-  }
-  .container-2:hover  .content-2{
-    font-size: 32px;
-  }
-  .post-content{
-    font-size: 32px;
-    font-weight: 500;
-  }
-  .user-discuss{
-    font-size: 24px;
-    font-weight: 700;
-  }
 }
 
 @media(min-width:1500px){
@@ -620,12 +467,7 @@ span{
   .post-meta-1{
     font-size: 24px;
   }
-  .container-1:hover  .post-meta-1{
-    font-size: 24px;
-  }
-  .container-2:hover   .post-meta-2{
-    font-size: 24px;
-  }
+
   .post-meta-2{
     font-size: 24px;
   }
@@ -640,31 +482,17 @@ span{
     font-size: 36px;
     line-height: 1.1;
   }
-  .container-1:hover  .content-1{
-    font-size: 36px;
-    line-height: 1.1;
-
-  }
-  .container-2:hover  .content-2{
-    font-size: 36px;
-    line-height: 1.1;
-  }
+ 
   .container-1{
     margin-left: 12%;
   max-width: 60%;
   }
-  .container-1:hover{
-    margin-left: 17%;
-  max-width: 60%;
-  }
+
   .container-2{
   margin-left: 30%;
   width: 64%;
   }
-  .container-2:hover{
-  margin-left: 25%;
-  width: 64%;
-  }
+
 }
 
 @media (min-width:1600px){

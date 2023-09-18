@@ -132,7 +132,7 @@ background:linear-gradient(#434343,#000000);
 bottom: 0;
 left: 0;
 margin-top: 50px;
-  z-index: -1;
+  z-index: 4;
  width: 100%;
  text-align: center;
  height: clamp(70px,4vh,90px);
@@ -171,6 +171,7 @@ float:right;
   z-index: 10;
   
 }
+
 .wrapper nav{
   position: relative;
   display: flex;
@@ -197,6 +198,9 @@ nav .content .links{
   text-decoration: none;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin-top: clamp(2px,9vw,16px);
+}
+.logo img{
+  display: none;
 }
 .content .links li{
   list-style: none;
@@ -391,6 +395,7 @@ line-height: 25px;
 
   .wrapper{
     padding-bottom: 10px;
+  
  
   }
   .vriddhi_logo{
@@ -398,6 +403,7 @@ line-height: 25px;
     background-color: #080808;
     width: 48%;
     height: 15%;
+    padding-bottom: 12px;
     margin-left: 10%;
   }
   .copyright{
@@ -489,6 +495,15 @@ width:clamp(280px,2vw,350px);
   }
   #icon-s{
     margin-top: 1vw;
+  }
+  .logo img{
+    display: inline;
+    margin-top: -38%;
+   
+  }
+  .logo a{
+    display: none;
+  
   }
 }
 @media screen and (max-width:740px){

@@ -46,8 +46,8 @@
       <div class="container-1">
         <div id=user-info-1>
           <div id="logo-1">
-            {% set fname = 'img/'+  params['login_image']  %}
-            <img class="mb" src="{{url_for('static', filename=fname)}}" alt="" width="110" height="110">
+          
+            <img class="mb" src="{{url_for('static', filename='img/i.png)}}" alt="" width="80" height="80">
           </div>
           <div id="username-1">
            {{post.user.username}}
@@ -91,8 +91,8 @@
  
   <div id=user-info-2>
     <div id="logo-2">
-      {% set fname = 'img/'+  params['login_image']  %}
-      <img class="mb" src="{{url_for('static', filename=fname)}}" alt="" width="110" height="110">
+    
+      <img class="mb" src="{{url_for('static', filename='img/i.png')}}" alt="" width="80" height="80">
     </div>
     <div id="username-2">
      {{post.user.username}}

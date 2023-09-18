@@ -33,7 +33,7 @@
     <div class="control-group">
       <div class="form-group floating-label-form-group controls">
       
-        <textarea rows="8" class="form-control" name = "descrip" id="descrip"style="font-size:32px;font-family:cursive" >
+        <textarea rows="4" class="form-control" name = "descrip" id="descrip"style="font-size:clamp(14px,3vw,28px);font-family:cursive" >
           {{user.description}}</textarea>
        
       </div>
@@ -66,7 +66,7 @@
       
           
           <div class="form-group">
-                            <a type="submit" name="btnSubmit" class="btnContact" href="/add_post" >
+                            <a type="submit" name="btnSubmit" id="add_button" href="/add_post" >
                               <div class="but-add">Add Post</div></a>
                         </div>
           <br>
@@ -75,28 +75,26 @@
     </br>
     {% if posts_of_user %}
         {% for post_of_user in posts_of_user %}
-        <div class="post-preview">
-          <br>
-              <div class="post-title">{{ post_of_user.title }}
+        <div class="container-2">
+        
+              <div class="post-title-2">{{ post_of_user.title }}
               </div>
-            <p class="post-meta">➔ Thinking of you
+            <p class="post-meta-2">➔ Thinking of you
             
               on {{post_of_user.date}}</p>
-          <div class="content-prof" >{{post_of_user.content[0:300]}}...</div>
+          <div class="content-2" >{{post_of_user.content[0:100]}}...</div>
         </br> 
-      </br>
-        <div class="buttons">
-      <a class="btn btn-dark "href="/individual_post/{{post_of_user.slug}}" role="button">
-        <div class="text-2">View</div></a>
-      <a class="btn btn-warning" href="/individual_post/edit/{{post_of_user.sno}}" role="button">
-        <div class="text-2">Edit</div></a>
+      
+        <div class="buttons" >
+      <a class="btn btn-dark "href="/individual_post/{{post_of_user.slug}}" role="button" id="view_button">
+        <div >View</div></a>
+      <a class="btn btn-warning" href="/individual_post/edit/{{post_of_user.sno}}" role="button"id=view_button>
+        <div >Edit</div></a>
    
         </div>
-    <br>
+   
         </div>
-     <br>
-     <br>
-      
+   
  
         {% endfor %}
         {% else %}

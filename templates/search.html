@@ -1,19 +1,14 @@
 {% extends "layout.html" %}
 {% block body %}
-    <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/cycle.jpg') }}')">
-      <div class="overlay"></div>
-      <div class="container-image-fluid">
-       
-            <div class="site-heading">
-              <h1>V_ridDhᴉ</h1>
-              <div class="subheading">Be A Individual</div>
-              
-             
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+<header>
+   
+  <div class="video-container">
+      <video autoplay muted loop>
+          <source src="{{ url_for('static', filename='img/vriddhi_vedio.mp4') }}" type="video/mp4">
+         
+      </video>
+  </div>
+  </header>
     <body>
       <link href="{{ url_for('static', filename='css/for_home.css') }}" rel="stylesheet">
       <div class="animation"></div>
@@ -26,13 +21,11 @@
        
      
        <h3>You thought of....  ||<span class="searched">{{searched}}</span></h3>  
-          <h4></h4>
+         
   
       <br>
       <br>
-      <br>
-      <br>
-      <br>
+    
    
        
       {% for post in posts %}
@@ -42,8 +35,8 @@
       <div class="container-1">
         <div id=user-info-1>
           <div id="logo-1">
-            {% set fname = 'img/'+  params['login_image']  %}
-            <img class="mb" src="{{url_for('static', filename=fname)}}" alt="" width="110" height="110">
+          
+            <img class="mb" src="{{url_for('static', filename='img/i.png')}}" alt="" width="110" height="110">
           </div>
           <div id="username-1">
            {{post.user.username}}
@@ -55,7 +48,7 @@
           <div class="post-preview-1">
             <a href="/individual_post/{{post.slug}}"|slugify|>
              
-<br>
+
               <h2 class="post-title-1">{{ post.title }}
 
               </h2>
@@ -66,7 +59,7 @@
               on {{post.date}}</p>
           </div>
           <div class="content-1">
-          {{post.content[0:300]}}...
+          {{post.content[0:100]}}...
           </div>
           <br>
           <br>
@@ -75,9 +68,7 @@
           </div>
          
           
-<br>
-<br>
-<br>
+
 {% else %}
 
 
@@ -86,8 +77,8 @@
 <div class="container-2">
   <div id=user-info-2>
     <div id="logo-2">
-      {% set fname = 'img/'+  params['login_image']  %}
-      <img class="mb" src="{{url_for('static', filename=fname)}}" alt="" width="110" height="110">
+   
+      <img class="mb" src="{{url_for('static', filename='img/i.png')}}" alt="" width="110" height="110">
     </div>
     <div id="username-2">
      {{post.user.username}}
@@ -101,7 +92,7 @@
   <div class="post-preview-2">
     <a href="/individual_post/{{post.slug}}"|slugify|>
      
-       <br>
+     
       <h2 class="post-title-2">{{ post.title }}
 
       </h2>
@@ -113,18 +104,16 @@
       on {{post.date}}</p>
   </div>
 <div class="content-2">
-  {{post.content[0:300]}}...
+  {{post.content[0:100]}}...
  
   </div> 
 <br>
-<br>
-</div>
 
 </div>
 
-<br>
-</br>
-<br>
+</div>
+
+
  {% endif %}
   {% endfor %}
  

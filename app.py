@@ -20,7 +20,9 @@ app = Flask(__name__)
 
 
 
-app.config['SQLALCHEMY_DATABASE_URI']= os.environ.get('DATABASE_URL')
+
+app.config['SQLALCHEMY_DATABASE_URI']= 'postgresql://vriddhi_database_6e3c_user:fN0x4D5jSv7V1d2hg1V1527qGuIEzi5q@dpg-cjvbkc15mpss73f4g4s0-a.ohio-postgres.render.com/vriddhi_database_6e3c'
+#'postgresql://vriddhi_database_6e3c_user:fN0x4D5jSv7V1d2hg1V1527qGuIEzi5q@dpg-cjvbkc15mpss73f4g4s0-a.ohio-postgres.render.com/vriddhi_database_6e3c'
 app.config['SECRET_KEY']='superfeifj43uhf&^Uhajhwefi43y7rf43iday898&98'
 #postgresql://vriddhi_database_user:5n3Qb5hELJCSiJEitwJkCnvmyhMCbPf7@dpg-cjtgkhnhdsdc73ammhe0-a.oregon-postgres.render.com/vriddhi_database
     
@@ -39,24 +41,18 @@ class Comments(db.Model,UserMixin):
     sno = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(50), nullable=False)
     description=db.Column(db.String(500),default="You can easily fill this.")
-   # mine=db.relationship('Posts',backref="user")
-    password = db.Column( nullable=False)
+    mine=db.relationship('Posts',backref="user")
+    password = db.Column(db.String(200),nullable=False)
     email = db.Column(db.String(50), nullable=False,unique=True)
     img_file = db.Column(db.String(500), nullable=True)
     id=db.Column(db.String(8),nullable=False)
     date = db.Column(db.String(12), nullable=True)
 
-class Contacts(db.Model):
-    sno = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String(80), nullable=False)
-    phone = db.Column(db.String(12), nullable=False)
-    msg = db.Column(db.String(120), nullable=False)
-    date = db.Column(db.String(12), nullable=True)
-    email = db.Column(db.String(20), nullable=False)
+
 #class Reviews(db.Model):
     #sno = db.Column(db.Integer, primary_key=True)
     
-    #post_id = db.Column(db.Integer, db.ForeignKey('posts.sno', ondelete='CASCADE'), nullable=False)
+    
    
     #reviews = db.Column(db.String(500), nullable=False)
     #date = db.Column(db.String(12), nullable=False)
@@ -68,10 +64,10 @@ class Posts(db.Model,UserMixin):
     title = db.Column(db.String(50), nullable=False)
     slug = db.Column(db.String(20), nullable=False)
     content = db.Column(db.String(120), nullable=False)
-   # post = db.relationship('Reviews', backref=db.backref('posts_rev'))
-    #user_id = db.Column(db.Integer, db.ForeignKey('comments.sno', ondelete='CASCADE'))
-    date = db.Column(db.String(12), nullable=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('comments.sno', ondelete='CASCADE'))
     
+    date = db.Column(db.String(12), nullable=True)
+ 
 
 
 @app.route("/")
@@ -112,23 +108,26 @@ def home():
 def craccount():
 
  if request.method=='POST':
-   # user = Comments.query.filter_by(email=request.form.get('email')).first()
-  #  if user:
-     # flash('Individual, this email is already registered !')
-      #return redirect('/new_account')
-   # else:
+    user = Comments.query.filter_by(email=request.form.get('email')).first()
+    if user:
+      flash('Individual, this email is already registered !')
+      return redirect('/new_account')
+    else:
       username=request.form.get('username')
       email=request.form.get('email')
       password=request.form.get('password')
       c_pass=request.form.get('cpass')
-      id=random.randint(1000,10000)
-       
-     
+      
+      for i in range(1,10):
+        id=random.randint(1000,10000)
+        if not Comments.query.filter_by(id=id).first():
+           uid=id
+           break
         
            
       if c_pass==password:
-          hash_pass=generate_password_hash(c_pass,"sha256")
-          user = Comments(username=username, email=email,password=hash_pass,id=id,date=77)
+          hash_pass=generate_password_hash(c_pass)
+          user = Comments(username=username, email=email,password=hash_pass,id=id,date=datetime.now())
           db.session.add(user)
           db.session.commit()
           session['email']=email
@@ -167,14 +166,14 @@ def dash_route():
 @app.route("/add_post" ,methods = ['GET', 'POST'])
 
 def add_post():
-   # user_id_of_user=Comments.query.filter_by(email=session['email']).first()
+    user_id_of_user=Comments.query.filter_by(email=session['email']).first()
     if request.method == 'POST':
             #user=current_user.sno
             box_title = request.form.get('title')
             #tline = request.form.get('tline')
             category = request.form.get('category')
             content = request.form.get('content')
-           # user = user_id_of_user.sno
+            user = user_id_of_user.sno
            
            
           
@@ -257,14 +256,15 @@ def search():
     searched=request.form.get('q')
     user_search=request.form.get('q')
     if request.method=='POST':
-       if Comments.query.filter_by(id=searched).first():
-           return redirect('/user_account/'+searched)
-       else:
+        #.query.filter_by(id=searched).first():
+           #return redirect('/user_account/'+searched)
+        
         posts=Posts.query.filter(Posts.content.like('%'+ searched +'%'))
-        posts=posts.order_by(Posts.title).all()
+        if posts:
+            posts=posts.order_by(Posts.title).all()
     
        #return redirect('/searched')
-       return render_template('search.html',posts=posts,index=index,searched=searched)
+    return render_template('search.html',posts=posts,index=index,searched=searched)
 
 # community
 @app.route('/community')

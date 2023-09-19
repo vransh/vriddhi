@@ -100,6 +100,7 @@ input, select {
 
 /*nav try*/
 
+
 *{
   margin: 0;
   padding: 0;
@@ -128,7 +129,10 @@ body{
 /* footer */
 .cont-footer{
 position: fixed;
-background:linear-gradient(#434343,#000000);
+background:linear-gradient(120deg,
+#434343
+,
+#181818);
 bottom: 0;
 left: 0;
 margin-top: 50px;
@@ -405,6 +409,7 @@ line-height: 25px;
     height: 15%;
     padding-bottom: 12px;
     margin-left: 10%;
+    z-index: 2;
   }
   .copyright{
    
@@ -416,6 +421,7 @@ line-height: 25px;
   }
   .wrapper #show-menu:checked ~ .menu-icon i::before{
     content: "\f00d";
+    z-index: 6;
    
   }
   .wrapper .search-box{
@@ -436,7 +442,7 @@ width:clamp(280px,2vw,350px);
   top:36px;
     left: -100%;
     margin-left: 0;
-  
+    z-index: 6;
     overflow-y: auto;
     padding-bottom: 80px;
     transition: all 0.3s ease;

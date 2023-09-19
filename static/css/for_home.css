@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kenia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita One&display=swap');
 /*for vedio*/
 body, header {
   margin: 0;
@@ -6,7 +8,7 @@ body, header {
 
 /* Style the header with a background color and text color */
 header {
-  background-color: #000000;
+  background-color: #181818;
   color: white;
   text-align: center;
   padding: 20px;
@@ -16,7 +18,7 @@ header {
 /* Style the video container to make it full-width and responsive */
 .video-container {
   position: relative;
-  width: 100%;
+ 
   height: clamp(270px,25vw,500px);
 
 }
@@ -27,8 +29,9 @@ video {
   top: 0;
   left: 0;
 width:100%;
-  height: 100%;
+  height: clamp(270px,25vw,500px);
   z-index: 5;
+ 
 
 }
 
@@ -91,7 +94,7 @@ header.masthead .site-heading
   box-shadow: 5px 5px 9px rgb(149, 147, 147);
     max-width:82% ;
    
-  background:linear-gradient(120deg,#0D324D,#b2d2ec);
+  background:linear-gradient(120deg,#0D324D,#131313);
  border-radius: 9px;
 overflow-wrap: break-word;
 margin-left: 13%;
@@ -178,20 +181,22 @@ margin-bottom: 6%;
 
    .post-title-1{
     font-size: clamp(20px,4vw,30px);
-    text-decoration:#BDD4E7 underline;
+    text-decoration:#0D324D underline;
     margin-left: 2%;
     margin-bottom: 4px;
     color:#BDD4E7;
    padding-top: 2%;
+   font-family: Kenia;
     
    }
    .post-title-2{
     font-size: clamp(20px,4vw,30px);
-    text-decoration:#BDD4E7 underline;
+    text-decoration:#0D324D underline;
     margin-left: 2%;
     margin-bottom: 4px;
     color:#BDD4E7;;
    padding-top: 2%;
+   font-family: kenia;
   
    }
    .post-meta-1{
@@ -199,6 +204,7 @@ margin-bottom: 6%;
     font-size: 11px;
     color:white;
     font-weight: 700;
+  
    }
 
    .post-meta-2{
@@ -211,7 +217,7 @@ margin-bottom: 6%;
    /*username*/
    span{
     text-decoration: salmon underline;
-    font-size: clamp(14px,3vw,22px);
+    font-size: clamp(14px,3vw,15px);
     margin-left: 3px;
  
     color:salmon;
@@ -222,25 +228,26 @@ margin-bottom: 6%;
 
  .content-1{
         line-height: 1.0;
-       font-size: clamp(15px,3vw,22px);
+       font-size: clamp(15px,2vw,22px);
        margin-top: 10px;
        margin-left:8% ;
      font-weight: 500;
      margin-bottom: 10px;
     margin-right: 3%;
-     color:white
+     color:white;
+     font-family: Saira;
         }
 
         .content-2{
             color: white;
             line-height: 1.0;
-           font-size: clamp(15px,3vw,22px);
+           font-size: clamp(15px,2vw,22px);
            margin-top: 10px;
            margin-left:8% ;
          font-weight: 500;
          margin-bottom: 10px;
          margin-right: 3%;
-        
+        font-family: Saira;
 
             }
   
@@ -251,7 +258,13 @@ margin-bottom: 6%;
                 width:11%;
                position: fixed;
            z-index:5;
-              background:linear-gradient(240deg,#434343,#000000)
+              background:linear-gradient(120deg,
+             
+            
+
+              #000000
+              ,
+              #434343)
             }
            
                
@@ -277,7 +290,7 @@ overflow-wrap: break-word;
   font-size: clamp(24px,2vw,35px);
   opacity: 10px;
  
-  font-family: 'Lucida Sans';
+  font-family: Saira;
 
 letter-spacing: 1px;
   font-weight: 800;
@@ -286,11 +299,12 @@ letter-spacing: 1px;
 .user-discuss{
   margin-left: 40%;
   font-size: clamp(21px,2vw,32px);
-  font-weight: 700;
+  font-weight: 500;
   text-align: end;
   margin-top: 3%;
   margin-bottom: 10rem;
-  color:#494D5F
+  color:#494D5F;
+  font-family: Lilita One;
 }
 @media(min-width:340px){
   #user-info-1{
@@ -320,11 +334,11 @@ letter-spacing: 1px;
 
 
   .post-meta-1{
-    font-size: 18px;
+    font-size: 13px;
   }
  
   .post-meta-2{
-    font-size: 18px;
+    font-size: 13px;
   }
 
  
@@ -475,12 +489,14 @@ span{
     font-size: 30px;
   }
   .content-1{
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.1;
+    font-weight: 600;
   }
   .content-2{
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.1;
+    font-weight: 600;
   }
  
   .container-1{

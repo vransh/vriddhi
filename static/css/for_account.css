@@ -157,12 +157,9 @@ h1{
           margin-bottom: 8px;
           color: rgb(18, 16, 16);
          border:3px solid black;
-          background:transparent
+          background:#ffffff;
         }
-#view_button :hover{
-color:black;
-  background:white;
-}
+
 
  
   .subheading{
@@ -202,12 +199,12 @@ color:black;
     padding: 0.8%;
     
     text-decoration: none;
-   border-radius: 5px;
+   border-radius: 8px;
  float: right;
 
     background:
   #32d1c4;
- border: 1px solid black;
+ border: 3px solid black;
   color: #534545;
   cursor: pointer;
   margin-bottom: 0px;

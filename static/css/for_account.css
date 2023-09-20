@@ -159,6 +159,10 @@ h1{
          border:3px solid black;
           background:transparent
         }
+#view_button :hover{
+color:black;
+  background:white;
+}
 
  
   .subheading{
@@ -202,7 +206,7 @@ h1{
  float: right;
 
     background:
-  #dcdcdc;
+  #32d1c4;
  border: 1px solid black;
   color: #534545;
   cursor: pointer;

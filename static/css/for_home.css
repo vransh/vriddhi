@@ -11,26 +11,25 @@ header {
   background-color: #181818;
   color: white;
   text-align: center;
-  padding: 20px;
+ 
  
 }
 
 /* Style the video container to make it full-width and responsive */
 .video-container {
   position: relative;
- 
+ width:100%;
   height: clamp(270px,25vw,500px);
 
 }
 
 /* Style the video to cover the entire container */
 video {
-  position: absolute;
-  top: 0;
-  left: 0;
+
 width:100%;
-  height: clamp(270px,25vw,500px);
-  z-index: 5;
+height:100%;
+  object-fit:cover;
+  
  
 
 }

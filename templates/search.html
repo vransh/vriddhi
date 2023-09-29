@@ -1,14 +1,8 @@
 {% extends "layout.html" %}
 {% block body %}
-<header>
-   
-  <div class="video-container">
-      <video autoplay muted loop>
-          <source src="{{ url_for('static', filename='img/vriddhi_vedio.mp4') }}" type="video/mp4">
-         
-      </video>
-  </div>
-  </header>
+<br>
+<br>
+<br>
     <body>
       <link href="{{ url_for('static', filename='css/for_home.css') }}" rel="stylesheet">
       <div class="animation"></div>
@@ -29,100 +23,51 @@
    
        
       {% for post in posts %}
-      {% if loop.index %2==0 %}
+    
   
-      <div class="container-fluid" >
       <div class="container-1">
-        <div id=user-info-1>
-          <div id="logo-1">
-          
-            <img class="mb" src="{{url_for('static', filename='img/i.png')}}" alt="" width="110" height="110">
-          </div>
-          <div id="username-1">
-           {{post.user.username}}
-        </div>
-        <div id="uid-1">
-          <a href="/user_account/{{post.user.id}}">SPI: {{post.user.id}}</a>
-        </div>
-        </div>
-          <div class="post-preview-1">
-            <a href="/individual_post/{{post.slug}}"|slugify|>
-             
-
-              <h2 class="post-title-1">{{ post.title }}
-
-              </h2>
-             
-            </a>
-            <p class="post-meta-1">➔ Posted by <a href="/user_account/{{post.user.id}}"><span>{{post.user.username}}</span></a>
-
-              on {{post.date}}</p>
-          </div>
-          <div class="content-1">
-          {{post.content[0:100]}}...
-          </div>
-          <br>
-          <br>
-         
-          </div> 
-          </div>
-         
-          
-
-{% else %}
-
-
-<div class="container-fluid">
- 
-<div class="container-2">
-  <div id=user-info-2>
-    <div id="logo-2">
+        <div class="csub-1">
+            
+                 <div class="post-preview-1">
+                   <div id="username-1">
+                     <img  src="{{url_for('static', filename='img/i.png')}}" alt="" width="24" height="24" padding-top="10px">
+                     <a href="/user_account/{{post.user.id}}">{{post.user.username}}</a>•Joined on {{post.user.date}}
+                   </div>
+                   <a href="/individual_post/{{post.slug}}"|slugify|>
+                 <div class="post-title-1">{{ post.title }}
    
-      <img class="mb" src="{{url_for('static', filename='img/i.png')}}" alt="" width="110" height="110">
-    </div>
-    <div id="username-2">
-     {{post.user.username}}
-  </div>
-  <div id="uid-2">
-  <a href="/user_account/{{post.user.id}}">SPI: {{post.user.id}}</a>
-  </div>
-  
-  </div>
-
-  <div class="post-preview-2">
-    <a href="/individual_post/{{post.slug}}"|slugify|>
-     
-     
-      <h2 class="post-title-2">{{ post.title }}
-
-      </h2>
-     
-    </a>
+                 </div>
+                
+               </a>
+               <p class="post-meta-1">➔ Posted this
+                 <a href="#"></a>
+                 on {{post.date}}</p>
+             </div>
+             <div class="content-1">
+             {{post.content[0:470]}}...
+             </div>
+           <br>
+          
+          
+             </div> 
+             <hr>
+             </div>
+             
+             </div>
+            
+             
    
-    <p class="post-meta-2">➔ Posted by <a href="/user_account/{{post.user.id}}"><span>{{post.user.username}}</span></a>
-     
-      on {{post.date}}</p>
-  </div>
-<div class="content-2">
-  {{post.content[0:100]}}...
- 
-  </div> 
-<br>
-
-</div>
-
-</div>
+   
+   
+   
+          
 
 
- {% endif %}
   {% endfor %}
  
     <br>
     <br>      
-    <br>
-    <br>      
-    <br>
-    <br>      
+     
      
     </body>
     {% endblock %}

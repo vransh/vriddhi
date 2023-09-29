@@ -96,7 +96,7 @@ def home():
      
 @app.route("/")
 def intro():
-  return render_template('intro.html')
+  return render_template('index.html')
 @app.route("/new_account",methods=['GET','POST'])
 def craccount():
 

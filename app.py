@@ -92,7 +92,7 @@ def home():
 
     return render_template('home.html',posts=posts,index=index)
  else:
-  return redirect('/')
+  return redirect('/new_account')
      
 #@app.route("/comments", methods=['GET', 'POST'])
 #def comments():

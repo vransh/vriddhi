@@ -1,19 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Kenia&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Siara&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita One&display=swap');
 /*for vedio*/
 body, header {
   margin: 0;
   padding: 0;
+
 }
 
 /* Style the header with a background color and text color */
-header {
-  background-color: #181818;
-  color: white;
-  text-align: center;
- 
- 
-}
+header.masthead
+{background:no-repeat center center;background-color:#e0e6ea
+    ;height: 30rem;width:100%;backface-visibility: visible;background-size:cover;}
+
+   
+  header.masthead .page-heading
+  {padding:25px 0 150px;color:#3c4757}
+  header.masthead .page-heading .subheading,header.masthead .site-heading .subheading
+  {
+      font-size:clamp(20px,4vw,35px);color: #fbf8f8;font-weight:620;line-height:1.1;display:block;
+      margin:30px 0 0;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  }
+
+
+
+header.masthead .site-heading
+{text-align:center;padding-top: 150px;}
 
 /* Style the video container to make it full-width and responsive */
 .video-container {
@@ -26,13 +37,13 @@ header {
 /* Style the video to cover the entire container */
 video {
 
-width:100%;
-height:100%;
-  object-fit:cover;
-  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
  
 
 }
+/* not found page*/
 .notfound{
   font-size: clamp(48px,6vw,75px);
   font-family: Impact;
@@ -66,22 +77,11 @@ h3{
   font-size: clamp(30px,4vw,65px);
   font-weight: 600;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  margin-left: 12%;
+  margin-left: 2%;
 
 }
 
 
-header.masthead
-{background:no-repeat center center;background-color:#64696d
-    ;margin-top:0px;height:35rem;padding-top:20px;width:100%;backface-visibility: visible;background-size: cover;}
-
-    header.masthead .page-heading
-    {padding:25px 0 150px;color:#3c4757}
-    header.masthead .page-heading .subheading,header.masthead .site-heading .subheading
-    {
-        font-size:35px;font-weight:620;line-height:1.1;display:block;
-        margin:19px 0 0;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-    }
 
     h1{
       font-size: clamp(48px,6vw,65px);
@@ -91,148 +91,106 @@ header.masthead
      
       color: honeydew;
     }
+    h2{
+      font-size: clamp(48px,6vw,65px);
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      margin-bottom: 10px;
+      margin-top: 10px;
+     text-align: center;
+      color: rgb(0, 0, 0);
+    }
+
      .subheading{
       font-size:clamp(30px,6vw,45px);
     color: #F3BFB3;
   }
 
 
-header.masthead .site-heading
-{text-align:center;padding-top: 140px;}
-#id{
-  background: #000;
-}
+
+  
+     
+   
+
 
 /* for post */
 
 .container-1{
    
-  box-shadow: 5px 5px 9px rgb(149, 147, 147);
-    max-width:82% ;
+
+    width: 100% ;
    
-  background:linear-gradient(120deg,#0D324D,#131313);
- border-radius: 9px;
+   border-radius: 3px;
+
+  background:#FAF9F6;
+
 overflow-wrap: break-word;
-margin-left: 13%;
-margin-bottom: 6%;
+height: max-content;
+
 
   } 
  
-
+.csub-1{
   
-  .container-2{
+  height: 100%;
+  width:100%
+ 
+}
+  
+
+#username-1 a{
+  margin-top: 1%;
+font-family:  Saria;
+font-weight: 800;
+  font-size: clamp(15px,1vw,32px);
+
+  margin-bottom: 1px;
+  color:rgb(0, 0, 0);
+ 
+  
+  margin-right: 1%;
+  text-decoration: none;
+ 
+
+}
+
+#username-1{
+  margin-top: 1%;
+ 
+  font-family:  Saria;
+  font-weight: 800;
+    font-size: clamp(13px,1vw,24px);
+  
+    margin-bottom: 1px;
+    color:salmon;
    
-    border-radius: 9px;
-    overflow-wrap: break-word;
-  box-shadow:  5px 5px 9px rgb(106, 106, 95);
-    max-width:82%;
-  background:linear-gradient(120deg,#0D324D,#131313);
-     margin-left: 14%;
- margin-bottom: 6%;
+    margin-left: 1%;
+    text-decoration: none;
+}
    
-  }
-
-    /* for user*/
-    #user-info-1{
-      z-index: 1;
-      position: absolute;
-         margin-right: 100px;
-         height: 200px;
-         width: 310px;
-        right: 0;
-     
-         }
-         #user-info-2{
-         position: absolute;
-         
-           margin-left:490px ;
-           margin-right: 50px;
-           height: 200px;
-           width: 310px;
-           left: 0;
-          
-           }
-           #username-1{
-             margin-top: 15px;
-          font-family: Perpetua;
-          font-weight: 800;
-             font-size: 24px;
-             letter-spacing: 1px;
-             margin-bottom: 8px;
-           
-           }
-           #logo-1{
-           opacity: 10;
-         margin-left: 10px;
-       
-           }
-       #uid-1 a {
-        font-size: clamp(18px,4vw,30px);
-        font-weight: 800;
-        text-decoration: none;
-        color: #000;
-       }
-           #username-2{
-             margin-top: 15px;
-             font-family: Perpetua;
-             font-weight: 800;
-             font-size: 24px;
-             font-weight: 700;
-             margin-left: 5px;
-             letter-spacing: 1px;
-             margin-bottom: 8px;
-           }
-           #logo-2{
-           opacity: 10;
-           margin-left: 10px;
-           }
-       #uid-2 a{
-        font-size: clamp(18px,4vw,30px);
-        font-weight: 800;
-        text-decoration: none;
-        color: #000;
-        cursor: pointer;
-   }
-
-
    .post-title-1{
     font-size: clamp(20px,4vw,30px);
-    text-decoration:#0D324D underline;
-    margin-left: 2%;
+    text-decoration:#faf9f6 underline;
+    margin-left: 4%;
     margin-bottom: 4px;
-    color:#BDD4E7;
-   padding-top: 2%;
+    color:#028dff;
+   padding-top: 1%;
    font-family: Kenia;
-    
+ 
    }
-   .post-title-2{
-    font-size: clamp(20px,4vw,30px);
-    text-decoration:#0D324D underline;
-    margin-left: 2%;
-    margin-bottom: 4px;
-    color:#BDD4E7;;
-   padding-top: 2%;
-   font-family: kenia;
-  
-   }
+ 
    .post-meta-1{
     margin-left: 5%;
     font-size: 11px;
-    color:white;
+    color:black;
     font-weight: 700;
   
    }
 
-   .post-meta-2{
-    font-size: 11px;
-    font-weight: 700;
-    margin-left: 5%;
-    color: white;
-   }
+
  
    /*username*/
    span{
-    text-decoration: salmon underline;
+    text-decoration: whitesmoke underline;
     font-size: clamp(14px,3vw,15px);
     margin-left: 3px;
  
@@ -250,22 +208,10 @@ margin-bottom: 6%;
      font-weight: 500;
      margin-bottom: 10px;
     margin-right: 3%;
-     color:white;
+     color:rgb(0, 0, 0);
      font-family: Saira;
         }
 
-        .content-2{
-            color: white;
-            line-height: 1.0;
-           font-size: clamp(15px,2vw,22px);
-           margin-top: 10px;
-           margin-left:8% ;
-         font-weight: 500;
-         margin-bottom: 10px;
-         margin-right: 3%;
-        font-family: Saira;
-
-            }
   
             
            
@@ -274,13 +220,8 @@ margin-bottom: 6%;
                 width:11%;
                position: fixed;
            z-index:5;
-              background:linear-gradient(120deg,
-             
-            
-
-              #000000
-              ,
-              #434343)
+              background:linear-gradient(120deg,#000000, #434343);
+              display:none;
             }
            
                
@@ -314,24 +255,16 @@ letter-spacing: 1px;
 }
 .user-discuss{
   margin-left: 40%;
-  font-size: clamp(21px,2vw,32px);
-  font-weight: 500;
+  font-size: clamp(16px,2vw,27px);
+
   text-align: end;
   margin-top: 3%;
   margin-bottom: 10rem;
-  color:#494D5F;
+  color:#000000;
   font-family: Lilita One;
 }
-@media(min-width:340px){
-  #user-info-1{
-    display: none;
-  }
-  #user-info-2{
-    display: none;
-  }
-}
+
 @media (min-width:480px){
-  
 
   .post-meta-1{
     font-size: 11px;
@@ -339,15 +272,9 @@ letter-spacing: 1px;
   .post-meta-2{
     font-size: 11px;
   }
-
-
-
 
 }
 @media (min-width:720px){
-  
- 
-
 
   .post-meta-1{
     font-size: 13px;
@@ -357,80 +284,20 @@ letter-spacing: 1px;
     font-size: 13px;
   }
 
- 
-
-  
- 
 }
 @media(min-width:870px){
- #logo-1{
-  display: inline;
- }
+
  h3{
   margin-left: 8%;
 }
 
  .container-waterflow{
-  width:6%
+  width:6%;
+  display: inline;
  }
- #user-info-1{
-  
- display: inline;
-     margin-right:-12%;
-     height: 200px;
-     width: 310px;
-    right: 0;
- 
-     }
-     #user-info-2{
-   display: inline;
-    
-       margin-left:7% ;
-       margin-right: 50px;
-       height: 200px;
-       width: 310px;
-       left: 0;
-      
-       }
-       #username-1{
-         margin-top: 15px;
-      font-family: Perpetua;
-      font-weight: 800;
-         font-size: 24px;
-         letter-spacing: 1px;
-         margin-bottom: 8px;
-       
-       }
-       #logo-1{
-       opacity: 10;
-     margin-left: 10px;
-    
-   
-       }
-  
-       #username-2{
-         margin-top: 15px;
-         font-family: Perpetua;
-         font-weight: 800;
-         font-size: 24px;
-         font-weight: 700;
-         margin-left: 5px;
-         letter-spacing: 1px;
-         margin-bottom: 8px;
-       }
-       #logo-2{
-       opacity: 10;
-       margin-left: 10px;
-       }
-
-.container-1{
-  margin-left: 7%;
-max-width: 70%;
-}
-
-.container-2{
-margin-left: 26%;
-width: 69%;
+ .container-1{
+  margin-left: 8%;
+  width: 92%;
 }
 
 
@@ -438,116 +305,80 @@ width: 69%;
   margin-left:5%;
   margin-right: 5%;
 }
-span{
-  display:none
-}
+
 .searched{
   display: inline;
 }
+
 }
 @media(min-width:1200px){
-
-  #user-info-1{
-    margin-right:-7% ;
-  }
-  #user-info-2{
-    margin-left: 9%;
-  }
-  #username-1{
-    font-size: 26px;
-  }
-  #username-2{
-    font-size: 26px;
-  }
- 
+.container-waterflow{
+  display: inline;
+  width: 7%;
+}
+#username-1 img{
+  width:38px;
+  height: 38px;
+}
 
   .post-meta-1{
-    font-size: 21px;
+    font-size: 20px;
   }
 
   .post-meta-2{
-    font-size: 21px;
+    font-size: 20px;
   }
-  span{
-    font-size: 29px;
+  #username-1{
+    font-size: 28px;
   }
-  
+  #username-1 a{
+    font-size: 36px;
+  }
+
 
 }
 
 @media(min-width:1500px){
-#user-info-1{
-  margin-right:1% ;
-}
-#user-info-2{
-  margin-left: 12%;
-}
-#username-1{
-  font-size: 32px;
-}
-#username-2{
-  font-size: 32px;
-}
+  span{
+    display: none;
+  }
+
+  #username-1 img{
+    width:42px;
+    height: 42px;
+  }
   .post-title-1{
     font-size: 50px;
   }
-  .post-title-2{
-    font-size: 50px;
-  }
+ 
   .post-meta-1{
-    font-size: 24px;
+    font-size: 29px;
   }
 
-  .post-meta-2{
-    font-size: 24px;
-  }
+ 
   span{
     font-size: 30px;
   }
   .content-1{
-    font-size: 28px;
-    line-height: 1.1;
-    font-weight: 600;
-  }
-  .content-2{
-    font-size: 28px;
+    font-size: 35px;
     line-height: 1.1;
     font-weight: 600;
   }
  
-  .container-1{
-    margin-left: 12%;
-  max-width: 60%;
-  }
+ 
+   
+   
+        
+         #uid-1 a {
+          font-size: clamp(18px,4vw,30px);
+          font-weight: 600;
+          text-decoration: none;
+          color:rgb(0, 0, 0);
+          text-align: center;
+          margin-left: 30%;
+         }
+    
+    
 
-  .container-2{
-  margin-left: 30%;
-  width: 64%;
-  }
-
 }
 
-@media (min-width:1600px){
-  #user-info-1{
-    margin-right:2% ;
-  }
-  #user-info-2{
-    margin-left: 13%;
-  }
-  }
-@media (min-width:2000px){
-  #user-info-1{
-    margin-right:5% ;
-  }
-  #user-info-2{
-    margin-left: 14%;
-  }
-  }
-@media (min-width:2550px){
-#user-info-1{
-  margin-right:10% ;
-}
-#user-info-2{
-  margin-left: 17%;
-}
-}

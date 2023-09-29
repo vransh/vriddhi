@@ -157,9 +157,8 @@ h1{
           margin-bottom: 8px;
           color: rgb(18, 16, 16);
          border:3px solid black;
-          background:#ffffff;
+          background:transparent
         }
-
 
  
   .subheading{
@@ -199,12 +198,11 @@ h1{
     padding: 0.8%;
     
     text-decoration: none;
-   border-radius: 8px;
+   border-radius: 5px;
  float: right;
 
-    background:
-  #32d1c4;
- border: 3px solid black;
+    background:bisque;
+ border: 1px solid black;
   color: #534545;
   cursor: pointer;
   margin-bottom: 0px;

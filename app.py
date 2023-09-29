@@ -92,16 +92,11 @@ def home():
 
     return render_template('home.html',posts=posts,index=index)
  else:
-  return redirect('/new_account')
+  return redirect('/signin')
      
-#@app.route("/comments", methods=['GET', 'POST'])
-#def comments():
-  #if request.method=='POST':
-     # name=request.form.get('name')
-      #email=request.form.get('email')
-      #comment=request.form.get('comment')
-      
- # return render_template('comment_mine.html')
+@app.route("/")
+def intro():
+  return render_template('intro.html')
 @app.route("/new_account",methods=['GET','POST'])
 def craccount():
 
@@ -135,7 +130,7 @@ def craccount():
           return redirect('/new_account')
  return render_template("new_account.html")
 
-@app.route("/",methods=['GET','POST'])
+@app.route("/signin",methods=['GET','POST'])
 def dash_route():
          passed=None
          passw=None

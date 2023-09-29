@@ -72,7 +72,7 @@ class Posts(db.Model,UserMixin):
 
 
 
-@app.route("/",methods=['GET','POST'])
+@app.route("/home",methods=['GET','POST'])
 
 def home():
  
@@ -135,7 +135,7 @@ def craccount():
           return redirect('/new_account')
  return render_template("new_account.html")
 
-@app.route("/signin",methods=['GET','POST'])
+@app.route("/",methods=['GET','POST'])
 def dash_route():
          passed=None
          passw=None

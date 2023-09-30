@@ -114,7 +114,7 @@ html {
   text-size-adjust: 100%;
 }
 body{
-  background-color: #fffefb;
+  background-color: #ffffff;
   height: 100%;
 }
 
@@ -263,14 +263,14 @@ line-height: 25px;
  
   outline: none;
   font-size: clamp(20px,4vw,28px);
- 
+ color: black;
   font-weight: 700;
-  background:black;
+  background:rgb(255, 255, 255);
   padding: 0 100px 0 15px;
   border-radius: 20px;
 }
 .search-box input::placeholder{
-  color:rgb(246, 244, 244);
+  color:rgb(0, 0, 0);
   font-size: clamp(17px,3vw,30px)
  
 }

@@ -121,7 +121,7 @@ h3{
    
    border-radius: 3px;
 
-  background:#fffefb;
+  background:#ffffff;
 
 overflow-wrap: break-word;
 height: max-content;
@@ -169,7 +169,7 @@ font-weight: 800;
    
    .post-title-1{
     font-size: clamp(20px,4vw,30px);
-    text-decoration:#faf9f6 underline;
+    text-decoration:#ffffff underline;
     margin-left: 4%;
     margin-bottom: 4px;
     color:#028dff;

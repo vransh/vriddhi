@@ -39,13 +39,14 @@
     </div>
 
   </br>
+  <br>
+  <br>
   <div class="badge bg-dark text-wrap" id="uid">
     SPI : {{user.id}}
   </div>
     
   </div>
-  <hr>
-  <hr>
+ <br>
   <div class="container-post-profile">
     <h2> Intellects</h2>
     </br>
@@ -58,12 +59,12 @@
             <p class="post-meta-2">➔ Posted 
             
               on {{post_of_user.date}}</p>
-          <div class="content-2" >{{post_of_user.content[0:200]}}...</div>
+          <div class="content-2" >{{post_of_user.content[0:400]}}...</div>
      
         <div class="buttons">
-      <a class="btn btn-warning "href="/individual_post/{{post_of_user.slug}}" role="button" id="view_button"> <div> View</div></a>
+      <a class="btn btn-warning "href="/individual_post/{{post_of_user.slug}}" role="button" id="view_button"><div>View</div></a>
      </div>
-  
+ 
         </div>
    
       
@@ -79,8 +80,7 @@
   </body>
   <br>
 
-  <br>
-  <br>
+
 {% endblock %}
 
     

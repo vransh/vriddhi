@@ -177,7 +177,7 @@ h1{
 
 /* buttons-profile*/
 .text{
-  font-size: 25px;
+  font-size: clamp(20px,2vw,30px);
 
   font-weight: 600;
   background-color:none;
@@ -203,7 +203,7 @@ h1{
  float: right;
 
  background: bottom;
-background: rgb(203, 136, 78);
+background: black;
   color: #ffffff;
   cursor: pointer;
   margin-bottom: 0px;

@@ -264,7 +264,7 @@ line-height: 25px;
   outline: none;
   font-size: clamp(20px,4vw,28px);
  color: black;
-  font-weight: 700;
+  font-weight: 600;
   background:rgb(255, 255, 255);
   padding: 0 100px 0 15px;
   border-radius: 20px;
@@ -284,7 +284,7 @@ line-height: 25px;
   background:transparent;
   border: none;
   outline: none;
-  color: #fff;
+  color: #000000;
   font-size: clamp(25px,4vw,40px);
   cursor: pointer;
 }

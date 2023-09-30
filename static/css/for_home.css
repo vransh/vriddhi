@@ -220,7 +220,7 @@ font-weight: 800;
                 width:11%;
                position: fixed;
            z-index:5;
-              background:linear-gradient(120deg,#000000, #434343);
+              background:brown;
               display:none;
             }
            

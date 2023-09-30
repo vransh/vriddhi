@@ -114,17 +114,9 @@ html {
   text-size-adjust: 100%;
 }
 body{
-  background-color: #faf9f6;
+  background-color: #fffefb;
   height: 100%;
 }
-
-
-
-
-
-
-
-
 
 /* footer */
 .cont-footer{
@@ -271,7 +263,7 @@ line-height: 25px;
  
   outline: none;
   font-size: clamp(20px,4vw,28px);
-  color: #fefefe;
+ 
   font-weight: 700;
   background:black;
   padding: 0 100px 0 15px;

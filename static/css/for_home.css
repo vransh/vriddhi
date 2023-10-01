@@ -239,10 +239,10 @@ overflow-wrap: break-word;
   border-radius: 8px;
 }
 .post-content{
-  text-align: center;
+ 
   margin-top: 15px;
   margin-bottom: 20px;
-  margin-left: 15px;
+  margin-left: 5px;
   margin-right: 15px;
   font-size: clamp(16px,2vw,35px);
   opacity: 10px;

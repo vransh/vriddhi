@@ -7,9 +7,9 @@
  padding-right: 10px;
  padding-bottom: 8px;
  line-height: 1.1;
-  border: 2px solid #0a0a0a;
+  border: 2px solid #ffffff;
   border-radius: 8px;
-  background-color:rgb(255, 255, 255)
+  background-color:rgb(255, 255, 255);
 }
 .desire{
   overflow: scroll;
@@ -53,7 +53,7 @@ header.masthead .site-heading
 {text-align:center;padding-top: 150px;}
     
   body{
-    background: rgb(255, 249, 249);
+    background: rgb(45, 44, 44);
   }
       /* description*/
       .container-des{
@@ -66,6 +66,7 @@ header.masthead .site-heading
       font-family: Arial, Helvetica, sans-serif;
       margin-bottom: 20px;
       font-weight: 600;
+      color:blanchedalmond
       }
 .container-post-profile{
    margin-right: 10%;
@@ -77,7 +78,8 @@ header.masthead .site-heading
 
 #uid{
   font-size: clamp(20px,4vw,40px);
-  width: 300px
+  width: 300px;
+ 
   
 }
 h1{
@@ -114,12 +116,16 @@ h1{
     border-radius: 9px;
    
     max-width:100%;
- box-shadow: 5px 5px 5px black;
+background:white;
    
  margin-bottom: 2%;
 margin-right: 10%;
 margin-left: 10%;
+transition: all ease 1s;
    
+  }
+  .container-2:hover{
+    box-shadow: 5px 5px 5px rgb(122, 122, 122);
   }
   .post-title-2{
   font-size: 50px;
@@ -162,6 +168,7 @@ margin-left: 10%;
          border:3px solid black;
           background:transparent
         }
+      
 
  
   .subheading{
@@ -203,14 +210,15 @@ margin-left: 10%;
     text-decoration: none;
    border-radius: 8px;
  float: right;
-
+border:2px solid #403b4a;
  background: bottom;
-background: black;
+background: linear-gradient(120deg,#ff512f,#dd2476);
   color: #ffffff;
   cursor: pointer;
   margin-bottom: 0px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
 
 @media (max-width:1350px){
  

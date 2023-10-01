@@ -7,6 +7,7 @@ body, header {
 
 }
 
+
 /* Style the header with a background color and text color */
 header.masthead
 {background:no-repeat center center;background-color:#e0e6ea
@@ -201,7 +202,7 @@ font-weight: 800;
       
 
  .content-1{
-        line-height: 1.0;
+        line-height: 1.1;
        font-size: clamp(15px,2vw,22px);
        margin-top: 10px;
        margin-left:8% ;
@@ -209,6 +210,7 @@ font-weight: 800;
      margin-bottom: 10px;
     margin-right: 3%;
      color:rgb(0, 0, 0);
+
      font-family: Saira;
         }
 
@@ -242,17 +244,16 @@ overflow-wrap: break-word;
  
   margin-top: 15px;
   margin-bottom: 20px;
-  margin-left: 5px;
-  margin-right: 15px;
+  margin-left: 15px;
+  margin-right: 8px;
   font-size: clamp(16px,2vw,35px);
   opacity: 10px;
- 
-overflow-wrap: break-word;
-  font-family: Georgia, Times, 'Times New Roman', serif;
 
+  font-family: system-ui, -apple-system;
+font-weight: 600;
 letter-spacing: 1px;
-  font-weight: 800;
-  line-height: 1.5;
+
+  line-height: 1.4;
 }
 .user-discuss{
   margin-left: 40%;
@@ -330,10 +331,10 @@ letter-spacing: 1px;
     font-size: 20px;
   }
   #username-1{
-    font-size: 28px;
+    font-size: 18px;
   }
   #username-1 a{
-    font-size: 36px;
+    font-size: 22px;
   }
 
 
@@ -356,7 +357,13 @@ letter-spacing: 1px;
     font-size: 29px;
   }
 
- 
+  #username-1{
+    font-size: 28px;
+  }
+  #username-1 a{
+    font-size: 36px;
+  }
+
   span{
     font-size: 30px;
   }

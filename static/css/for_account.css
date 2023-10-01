@@ -9,7 +9,10 @@
  line-height: 1.1;
   border: 2px solid #ffffff;
   border-radius: 8px;
-  background-color:rgb(255, 255, 255);
+  background-color:rgb(255, 249, 249);
+}
+#descrip{
+  background: rgb(255, 249, 249);
 }
 .desire{
   overflow: scroll;
@@ -53,7 +56,7 @@ header.masthead .site-heading
 {text-align:center;padding-top: 150px;}
     
   body{
-    background: rgb(45, 44, 44);
+    background: rgb(255, 255, 255);
   }
       /* description*/
       .container-des{
@@ -66,7 +69,7 @@ header.masthead .site-heading
       font-family: Arial, Helvetica, sans-serif;
       margin-bottom: 20px;
       font-weight: 600;
-      color:blanchedalmond
+      color:rgb(0, 0, 0)
       }
 .container-post-profile{
    margin-right: 10%;
@@ -121,12 +124,16 @@ background:white;
  margin-bottom: 2%;
 margin-right: 10%;
 margin-left: 10%;
-transition: all ease 1s;
+transition: all ease 2s;
    
   }
   .container-2:hover{
-    box-shadow: 5px 5px 5px rgb(122, 122, 122);
-  }
+  
+   box-shadow: 8px 9px 9px rgb(54, 54, 54);
+  
+      transform: translateY(-5px);
+    
+    }
   .post-title-2{
   font-size: 50px;
     text-decoration:#d19f14 underline;
@@ -166,9 +173,12 @@ transition: all ease 1s;
           margin-bottom: 8px;
           color: rgb(18, 16, 16);
          border:3px solid black;
-          background:transparent
+          background:transparent;
+       
         }
-      
+      #view_button:hover{
+        transform: translateY(-5px);
+      }
 
  
   .subheading{
@@ -180,7 +190,7 @@ transition: all ease 1s;
 
       #sendMessageButton{
         float: right;
-        font-size: clamp(12px,4vw,25px);
+        font-size: clamp(11px,2vw,25px);
         font-weight: 600;
       }
 
@@ -197,15 +207,16 @@ transition: all ease 1s;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 400;
 }
+
  #add_button{
  
   
  
     margin-left: 6px;
-    font-size: clamp(18px,3vw,40px);
+    font-size: clamp(14px,3vw,40px);
     font-weight: 500;
     margin-bottom: 8px;
-    padding: 1.5%;
+    padding: 0.5%;
     
     text-decoration: none;
    border-radius: 8px;
@@ -221,7 +232,9 @@ background: linear-gradient(120deg,#ff512f,#dd2476);
 
 
 @media (max-width:1350px){
- 
+ #add_button{
+  padding: 1.6%;
+ }
   .container-des{
 margin-left: 9%;
 margin-right: 9%;
@@ -232,8 +245,8 @@ margin-right: 9%;
     width: 80%;
   }
   .container-2{
-    margin-right: 0%;
-    margin-left: 0%;
+    margin-right: 2%;
+    margin-left: 2%;
   }
 
 .post-title-2{

@@ -1,306 +1,205 @@
 @import url('https://fonts.googleapis.com/css2?family=Kenia&display=swap');
-.description{
-  font-size: clamp(14px,3vw,28px);
-  font-weight: 600;
- padding-top: 10px;
- padding-left: 15px;
- padding-right: 10px;
- padding-bottom: 8px;
- line-height: 1.1;
-  border: 2px solid #ffffff;
-  border-radius: 8px;
-  background-color:rgb(255, 249, 249);
-}
-#descrip{
-  background: rgb(255, 249, 249);
-}
-.desire{
-  overflow: scroll;
-}
-.but-add{
- text-align: center;
-}
 
-.video-container {
-  position: relative;
+header.masthead {
+  background: no-repeat center center;
+  background-color: #e0e6ea;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
-  height: clamp(270px,25vw,500px);
-
-}
-.img {
-  position: absolute;
-  top: 0;
-  left: 0;
-width:100%;
-  height: 100%;
-  z-index: 5;
-
+  backface-visibility: visible;
+  background-size: cover;
 }
 
-  header.masthead
-  {background:no-repeat center center;background-color:#e0e6ea
-      ;height: 30rem;width:100%;backface-visibility: visible;background-size:cover;}
-  
-     
-    header.masthead .page-heading
-    {padding:25px 0 150px;color:#3c4757}
-    header.masthead .page-heading .subheading,header.masthead .site-heading .subheading
-    {
-        font-size:clamp(20px,4vw,35px);color: #fbf8f8;font-weight:620;line-height:1.1;display:block;
-        margin:30px 0 0;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
-    }
+/* description*/
 
-
-
-header.masthead .site-heading
-{text-align:center;padding-top: 150px;}
-    
-  body{
-    background: rgb(255, 255, 255);
-  }
-      /* description*/
-      .container-des{
-        margin-top: 50px;
-        margin-left: 12%;
-       margin-right: 12%;
-      }
-      p{
-        font-size: clamp(22px,5vw,40px);
-      font-family: Arial, Helvetica, sans-serif;
-      margin-bottom: 20px;
-      font-weight: 600;
-      color:rgb(0, 0, 0)
-      }
-.container-post-profile{
-   margin-right: 10%;
-   margin-left: 13%;
-   margin-bottom: 10px;
-   width:72%;
-  
+.container-des {
+  margin-top: 50px;
+  margin-left: 12%;
+  margin-right: 12%;
 }
 
-#uid{
-  font-size: clamp(20px,4vw,40px);
+.description {
+  font-size: clamp(14px, 3vw, 36px);
+  font-weight: 600;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 10px;
+  padding-bottom: 8px;
+  line-height: 1.1;
+  height: min-content;
+  min-height: 100px;
+  border: 2px solid #1c1b1b;
+  border-radius: 8px;
+  background-color: rgb(255, 249, 249);
+}
+
+#descrip {
+  background: rgb(255, 249, 249);
+  font-size: clamp(18px, 3vw, 36px);
+  border: 2px solid black;
+}
+
+#uid {
+  font-size: clamp(20px, 4vw, 40px);
   width: 300px;
- 
-  
+  float: right;
+  font-family: 'quicksand';
+  border-radius: 0%;
 }
-h1{
-  font-size: clamp(40px,6vw,65px);
+
+p {
+  font-size: clamp(22px, 5vw, 50px);
+  font-family: 'Rubik';
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: rgb(0, 0, 0)
+}
+
+
+h1 {
+  font-size: clamp(32px, 6vw, 65px);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: rgb(253, 254, 255);
+  margin-bottom: 20px;
+  margin-top: 4%;
+}
+
+.subheading {
+  font-size: clamp(22px, 3vw, 45px);
+  color: white;
+}
+
+h2 {
+  font-size: clamp(32px, 5vw, 65px);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   margin-bottom: 30px;
-  margin-top: 40px;
- 
-  color: rgb(253, 254, 255);
+  color: rgb(23, 150, 223);
+  margin-left: 6%;
 }
-  h2{
-      font-size: clamp(32px,5vw,65px);
-      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-      margin-bottom: 30px;
-      color: rgb(8, 159, 247);
-  }
-  h3{
-    font-size: 25px;
-  font-style: italic;
+
+h3 {
+  font-size: clamp(25px, 3vw, 50px);
+  margin-left: 10%;
   font-weight: 600;
-  }
+}
 
-  /*post*/
-  .post-preview{
-    background-color: rgba(45, 191, 191, 0.495);
-    margin-top: 0px;
-    border-radius: 10px;
-  
-    box-shadow: 12px 12px 8px rgb(51, 51, 75);
-    border: #000;
-  }
-  .container-2{
-   
-    border-radius: 9px;
-   
-    max-width:100%;
-background:white;
-   
- margin-bottom: 2%;
-margin-right: 10%;
-margin-left: 10%;
-transition: all ease 2s;
-   
-  }
-  .container-2:hover{
-  
-   box-shadow: 8px 9px 9px rgb(54, 54, 54);
-  
-      transform: translateY(-5px);
-    
-    }
-  .post-title-2{
-  font-size: 50px;
-    text-decoration:#d19f14 underline;
-    margin-left: 1%;
-    margin-bottom: 12px;
-    color:#d19f14;
-   padding-top: 1%;
-   font-family: Keniya;
-  
-   }
-   .post-meta-2{
-    margin-left: 5%;
-   font-size: 24px;
-    color:rgb(0, 0, 0);
-    font-weight: 700;
+/*post*/
+#testimonial-grid-container {
+  padding: 2% 0%;
+}
 
-   }
+#testimonial-1,
+#testimonial-2 {
+  position: relative;
+  z-index: 0;
+}
 
+.post-title-1 {
+  font-size: clamp(20px, 3vw, 40px);
+  text-decoration: #f2f7fc underline;
+  margin-left: 4%;
+  margin-bottom: 4px;
+  color: #c9374c;
+  padding-top: 0;
+  font-family: 'orbitron';
 
- .content-2{
-        line-height: 1.0;
-      font-size: 36px;
-       margin-top: 6px;
-       margin-left:8% ;
-     font-weight: 500;
-     margin-bottom: 10px;
-    margin-right: 3%;
-     color:rgb(0, 0, 0);
-     font-family: Saira;
-        }
+}
 
-        #view_button{
- 
-          margin-left: 6px;
-          font-size: clamp(10px,2vw,24px);
-          font-weight: 800;
-          margin-bottom: 8px;
-          color: rgb(18, 16, 16);
-         border:3px solid black;
-          background:transparent;
-       
-        }
-      #view_button:hover{
-        transform: translateY(-5px);
-      }
+.content-1 {
+  line-height: 1.1;
+  word-break: break-all;
+  font-size: clamp(15px, 2vw, 26px);
+  margin-top: 1%;
+  margin-left: 8%;
+  font-weight: 500;
+  margin-bottom: 1%;
+  margin-right: 3%;
+  color: rgb(0, 0, 0);
+  font-family: 'Rubik';
+}
 
- 
-  .subheading{
-      font-size:clamp(30px,6vw,45px);
-  }
+.buttons {
+  margin-left: 2%;
+}
+
+#view_button {
+  margin-left: 2%;
+  font-size: clamp(14px, 2vw, 24px);
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: rgb(18, 16, 16);
+  font-family: 'quicksand';
+  border: 3px solid black;
+  background: transparent;
+}
+
+#view_button:hover {
+  transform: translateY(-5px);
+}
 
 
-
-
-      #sendMessageButton{
-        float: right;
-        font-size: clamp(11px,2vw,25px);
-        font-weight: 600;
-      }
-
-/* buttons-profile*/
-.text{
-  font-size: clamp(20px,2vw,30px);
-
+#sendMessageButton {
+  float: right;
+  font-size: clamp(11px, 2vw, 25px);
   font-weight: 600;
-  background-color:none;
-  border-radius: 5px;
-}
-.text-2{
-  font-size: 12px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: 400;
-}
-
- #add_button{
- 
-  
- 
-    margin-left: 6px;
-    font-size: clamp(14px,3vw,40px);
-    font-weight: 500;
-    margin-bottom: 8px;
-    padding: 0.5%;
-    
-    text-decoration: none;
-   border-radius: 8px;
- float: right;
-border:2px solid #403b4a;
- background: bottom;
-background: linear-gradient(120deg,#ff512f,#dd2476);
-  color: #ffffff;
-  cursor: pointer;
-  margin-bottom: 0px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 
-@media (max-width:1350px){
- #add_button{
-  padding: 1.6%;
- }
-  .container-des{
-margin-left: 9%;
-margin-right: 9%;
+@media(min-width:1800px) {
+
+  #top {
+    display: block;
   }
-  .container-post-profile{
+
+  #testimonial-1,
+  #testimonial-2 {
+    width: 53%;
+    display: inline-flex;
+    flex-direction: column;
+    height: max-content;
+    margin-top: 1%;
+    border: 2px solid black;
+  }
+
+  #testimonial-2 {
+    width: 45%;
+  }
+
+  .content-1 {
+    font-size: 29px;
+  }
+
+  #testimonial-grid-container {
+    padding-left: 7%;
+  }
+}
+
+
+@media (max-width:1350px) {
+
+  .container-des {
     margin-left: 9%;
-  
-    width: 80%;
+    margin-right: 9%;
   }
-  .container-2{
+
+  .container-2 {
     margin-right: 2%;
     margin-left: 2%;
   }
 
-.post-title-2{
-  margin-left: 3%;
-  margin-top: 3%;
-  font-size: clamp(24px,4vw,30px);
-  font-family: Kenia;
-}
-.post-meta-2{
-  font-size: clamp(11px,2vw,24px);
 }
 
-
-.content-2{
-  font-size: clamp(15px,3vw,22px);
-  line-height: 1.1;
-}
-  
-
-}
- @media (max-width:1000px){
-
- }
- @media (min-width:850px){
-
- #add_button{
-  float: none;
-  margin-left: 80%;
- }
- }
- 
- 
- @media (min-width:2000px){
-  #add_button{
-    margin-left: 85%;
+@media (max-width:780px) {
+  #uid {
+    width: 180px;
   }
- }
-  @media (max-width:780px){
-  
-    #uid{
-      width: 180px;
-    }
+}
 
- }
- @media (max-width:440px){
-  
- 
-
-  
- 
-  .text-2{
-    font-size: 16px;
+@media (max-width:440px) {
+  #uid {
+    width: 120px;
   }
- }
-     
-      
-    
+}

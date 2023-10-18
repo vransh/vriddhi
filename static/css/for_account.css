@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Kenia&display=swap');
+
+header.masthead {
+  background: no-repeat center center;
+  background-color: #e0e6ea;
+  height: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  backface-visibility: visible;
+  background-size: cover;
+}
+
+/* description*/
+
+.container-des {
+  margin-top: 50px;
+  margin-left: 12%;
+  margin-right: 12%;
+}
+
+.description {
+  font-size: clamp(14px, 3vw, 36px);
+  font-weight: 600;
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 10px;
+  padding-bottom: 8px;
+  line-height: 1.1;
+  height: min-content;
+  min-height: 100px;
+  border: 2px solid #1c1b1b;
+  border-radius: 8px;
+  background-color: rgb(255, 249, 249);
+}
+
+#descrip {
+  background: rgb(255, 249, 249);
+  font-size: clamp(18px, 3vw, 36px);
+  border: 2px solid black;
+}
+
+#uid {
+  font-size: clamp(20px, 4vw, 40px);
+  width: 300px;
+  float: right;
+  font-family: 'rubik'
+}
+
+p {
+  font-size: clamp(22px, 5vw, 50px);
+  font-family: 'Rubik';
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: rgb(0, 0, 0)
+}
+
+
+h1 {
+  font-size: clamp(32px, 6vw, 65px);
+  font-family: 'Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;';
+  color: rgb(253, 254, 255);
+  margin-bottom: 20px;
+  margin-top: 4%;
+}
+
+.subheading {
+  font-size: clamp(22px, 3vw, 45px);
+  color: white;
+}
+
+h2 {
+  font-size: clamp(32px, 5vw, 65px);
+
+  margin-bottom: 30px;
+  font-weight: 900;
+  color: rgb(23, 150, 223);
+  margin-left: 6%;
+}
+
+h3 {
+  font-size: clamp(25px, 3vw, 50px);
+  margin-left: 10%;
+  font-weight: 600;
+  font-family: 'rubik';
+}
+
+/*post*/
+#testimonial-grid-container {
+  padding: 2% 0%;
+}
+
+#testimonial-1,
+#testimonial-2 {
+  position: relative;
+  z-index: 0;
+}
+
+.post-title-1 {
+  font-size: clamp(20px, 3vw, 40px);
+  text-decoration: #f2f7fc underline;
+  margin-left: 4%;
+  margin-bottom: 4px;
+  color: #c9374c;
+  padding-top: 0;
+  font-family: 'orbitron';
+
+}
+
+.content-1 {
+  line-height: 1.1;
+  word-break: break-all;
+  font-size: clamp(15px, 2vw, 26px);
+  margin-top: 1%;
+  margin-left: 8%;
+  font-weight: 500;
+  margin-bottom: 1%;
+  margin-right: 3%;
+  color: rgb(0, 0, 0);
+  font-family: 'Rubik';
+}
+
+.buttons {
+  margin-left: 2%;
+}
+
+#view_button {
+  margin-left: 2%;
+  font-size: clamp(14px, 2vw, 24px);
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: rgb(18, 16, 16);
+  font-family: 'quicksand';
+  border: 3px solid black;
+  background: transparent;
+}
+
+#view_button:hover {
+  transform: translateY(-5px);
+}
+
+
+#sendMessageButton {
+  float: right;
+  font-size: clamp(11px, 2vw, 25px);
+  font-weight: 600;
+}
+
+
+@media(min-width:1800px) {
+
+  #top {
+    display: block;
+  }
+
+  #testimonial-1,
+  #testimonial-2 {
+    width: 53%;
+    display: inline-flex;
+    flex-direction: column;
+    height: max-content;
+    margin-top: 1%;
+    border: 2px solid black;
+  }
+
+  #testimonial-2 {
+    width: 45%;
+  }
+
+  .content-1 {
+    font-size: 29px;
+  }
+
+  #testimonial-grid-container {
+    padding-left: 7%;
+  }
+}
+
+
+@media (max-width:1350px) {
+
+  .container-des {
+    margin-left: 9%;
+    margin-right: 9%;
+  }
+
+  .container-2 {
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+
+}
+
+@media (max-width:780px) {
+  #uid {
+    width: 180px;
+  }
+}
+
+@media (max-width:440px) {
+  #uid {
+    width: 120px;
+  }
+}

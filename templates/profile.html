@@ -1,120 +1,109 @@
-{% extends "layout.html" %}
-{% block body %}
+{% extends "layout.html" %} {% block body %}
 
-<header class="masthead" style="background-image: url('{{ url_for('static', filename='img/profile.webp') }}')">
-  <div class="overlay"></div>
-  <div class="container-image-fluid">
-   
-        <div class="site-heading">
-          <h1>{{user.username}}</h1>
-          <span class="subheading">Joined on {{user.date}}</span>
-          
-         
-        </div>
-      </div>
-    </div>
-  </div>
+<header
+  class="masthead"
+  style="background-image: url('{{ url_for('static', filename='img/profile_image.webp') }}')"
+>
+  <h1>{{current_user.username}}</h1>
+  <span class="subheading">Joined on {{current_user.date}}</span>
 </header>
-    
-    <!-- Main Content -->
-  <body>
-    <link href="{{ url_for('static', filename='css/for_account.css') }}" rel="stylesheet">
-    <div class="container-des">
-      
-    
-   
+
+<body>
+  <div class="badge bg-dark text-wrap" id="uid">SPI : {{current_user.id}}</div>
+  <link
+    href="{{ url_for('static', filename='css/for_account.css') }}"
+    rel="stylesheet"
+  />
+  <div class="container-des">
     <p>Description</p>
-    
-      
-<div>
-  <form  action = "/profile" method="post" >
-
-  
-    <div class="control-group">
-      <div class="form-group floating-label-form-group controls">
-      
-        <textarea rows="4" class="form-control" name = "descrip" id="descrip"style="font-size:clamp(18px,3vw,28px);border:2px solid black" >
-          {{user.description}}</textarea>
-       
+    <form action="/profile" method="post">
+      <div class="control-group">
+        <div class="form-group floating-label-form-group controls">
+          <textarea rows="4" class="form-control" name="descrip" id="descrip">
+   {{current_user.description}}</textarea
+          >
+        </div>
       </div>
-    </div>
-
-      <button type="submit" class="btn btn-primary" value="Add post" id="sendMessageButton">Submit</button>
-
-
-
-
-
-
-
-
-
-      
-  </form>
-</div>
-
-  <br>
-  <br>
-  <div class="badge bg-dark text-wrap" id="uid">
-    SPI : {{user.id}}
+      <button
+        type="submit"
+        class="btn btn-primary"
+        value="Add post"
+        id="sendMessageButton"
+      >
+        Submit
+      </button>
+    </form>
   </div>
-    <br>
-    <br>
-    <br>
- 
+  <br />
+  <br />
+  <br />
+  <h2>Intellects</h2>
 
+  {% if posts_of_user %}
 
-  <div class="container-post-profile">
+  <div id="testimonial-grid-container">
+    <div id="top">
+      {% for post_of_user in posts_of_user %} {% if loop.index % 2 == 0 %}
+      <div id="testimonial-1" class="grid-item">
+        <div class="post-title-1">{{ post_of_user.title }}</div>
+
+        <div class="content-1">{{post_of_user.content[0:350]}}...</div>
+        <br />
+        <div class="buttons">
+          <a
+            class="btn btn"
+            href="/individual_post/{{post_of_user.slug}}"
+            role="button"
+            id="view_button"
+          >
+            <div>View</div></a
+          >
+          <a
+            class="btn btn"
+            href="/individual_post/edit/{{post_of_user.sno}}"
+            role="button"
+            id="view_button"
+          >
+            <div>Edit</div></a
+          >
+        </div>
+        <hr />
+      </div>
+
+      {% else %}
+      <div id="testimonial-2" class="grid-item">
+        <div class="post-title-1">{{ post_of_user.title }}</div>
+
+        <div class="content-1">{{post_of_user.content[0:300]}}...</div>
+        <br />
+        <div class="buttons">
+          <a
+            class="btn btn"
+            href="/individual_post/{{post_of_user.slug}}"
+            role="button"
+            id="view_button"
+          >
+            <div>View</div></a
+          >
+          <a
+            class="btn btn"
+            href="/individual_post/edit/{{post_of_user.sno}}"
+            role="button"
+            id="view_button"
+          >
+            <div>Edit</div></a
+          >
+        </div>
+        <hr />
+      </div>
+
+      {% endif %} {% endfor %}
     </div>
-    <h2> Intellects</h2>
-      
-          
-          <div class="form-group">
-                            <a type="submit" name="btnSubmit" id="add_button" href="/add_post" >
-                              <div class="but-add">Add Post</div></a>
-                        </div>
-          <br>
-          
-       
-                      </div>
-                      <br>
-    
-    {% if posts_of_user %}
-        {% for post_of_user in posts_of_user %}
-        <div class="container-2">
-        
-              <div class="post-title-2">{{ post_of_user.title }}
-              </div>
-            <p class="post-meta-2">➔ Thinking of you
-            
-              on {{post_of_user.date}}</p>
-          <div class="content-2" >{{post_of_user.content[0:100]}}...</div>
-        </br> 
-      
-        <div class="buttons" >
-      <a class="btn btn-dark "href="/individual_post/{{post_of_user.slug}}" role="button" id="view_button">
-        <div >View</div></a>
-      <a class="btn btn-warning" href="/individual_post/edit/{{post_of_user.sno}}" role="button"id=view_button>
-        <div >Edit</div></a>
-   
-        </div>
-   
-        </div>
-   
- 
-        {% endfor %}
-        {% else %}
-        <h3>NO thinking yet</h3>
-        {% endif %}
+  </div>
+  {% else %}
+  <h3>NO thinking yet</h3>
+  {% endif %}
+</body>
+<br />
 
-
-        </div>
-     
-  </body>
-  <br>
-  <br>
-  <br>
- 
- 
 {% endblock %}
-    

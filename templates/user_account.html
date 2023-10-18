@@ -1,92 +1,82 @@
-{% extends "layout.html" %}
-{% block body %}
+{% extends "layout.html" %} {% block body %}
 
-<link rel="icon" href="static/img/vriddhi_logo.png">
-   
-<header class="masthead" style="background-image: url('{{ url_for('static', filename='img/profile.webp') }}')">
-  <div class="overlay"></div>
-  <div class="container-image-fluid">
-   
-        <div class="site-heading">
-          <h1>{{user.username}}</h1>
-          <span class="subheading">Joined on {{user.date}}</span>
-          
-         
-        </div>
-      </div>
-    </div>
-  </div>
+<link rel="icon" href="static/img/vriddhi_logo.png" alt="vriddhi icon" />
+<header
+  class="masthead"
+  style="background-image: url('{{ url_for('static', filename='img/profile_image.webp') }}')"
+>
+  <h1>{{user.username}}</h1>
+  <span class="subheading">Joined on {{user.date}}</span>
 </header>
-  <link href="{{ url_for('static', filename='css/for_account.css') }}" rel="stylesheet">
 
-    
-    <!-- Main Content -->
-  <body>
-   
-    <div class="container-des">
-      
-    
-   
+<body>
+  <link
+    href="{{ url_for('static', filename='css/for_account.css') }}"
+    rel="stylesheet"
+  />
+  <div class="badge bg-dark text-wrap" id="uid">SPI : {{user.id}}</div>
+  <div class="container-des">
     <p>Description</p>
-    
-      
     <div class="description">
-     
-      <div>{{user.description}}
-       <br>
-      </div>
-    
+      {{user.description}}
+      <br />
     </div>
+  </div>
+  <br />
+  <br />
+  <br />
 
-  <br>
- <br>
-  <div class="badge bg-dark text-wrap" id="uid">
-    SPI : {{user.id}}
-  </div>
-    
-  </div>
- <br>
- <br>
- <br>
-  <div class="container-post-profile">
-    <h2> Intellects</h2>
-    
-   </div>
-    {% if posts_of_user %}
-        {% for post_of_user in posts_of_user %}
-        <div class="container-2">
-         
-              <div class="post-title-2">{{ post_of_user.title }}
-              </div>
-            <p class="post-meta-2">➔ Posted 
-            
-              on {{post_of_user.date}}</p>
-          <div class="content-2" >{{post_of_user.content[0:400]}}...</div>
-     
+  <h2>Intellects</h2>
+
+  {% if posts_of_user %}
+
+  <div id="testimonial-grid-container">
+    <div id="top">
+      {% for post_of_user in posts_of_user %} {% if loop.index % 2 == 0 %}
+      <div id="testimonial-1" class="grid-item">
+        <div class="post-title-1">{{ post_of_user.title }}</div>
+
+        <div class="content-1">{{post_of_user.content[0:350]}}...</div>
+        <br />
         <div class="buttons">
-      <a class="btn btn-warning "href="/individual_post/{{post_of_user.slug}}" role="button" id="view_button"><div>View</div></a>
-     </div>
- 
+          <a
+            class="btn btn"
+            href="/individual_post/{{post_of_user.slug}}"
+            role="button"
+            id="view_button"
+          >
+            <div>View</div></a
+          >
         </div>
-   
-      
-   
-        {% endfor %}
+        <hr />
+      </div>
 
-      
-        {% else %}
-        <h3>NO thinking yet</h3>
-        {% endif %}
+      {% else %}
+      <div id="testimonial-2" class="grid-item">
+        <div class="post-title-1">{{ post_of_user.title }}</div>
+
+        <div class="content-1">{{post_of_user.content[0:300]}}...</div>
+        <br />
+        <div class="buttons">
+          <a
+            class="btn btn"
+            href="/individual_post/{{post_of_user.slug}}"
+            role="button"
+            id="view_button"
+          >
+            <div>View</div></a
+          >
         </div>
-     
-  </body>
-  <br>
-<br>
-<br>
-<br>
+        <hr />
+      </div>
 
+      {% endif %} {% endfor %}
+    </div>
+  </div>
+  {% else %}
+  <h3>NO thinking yet</h3>
+  {% endif %}
+</body>
+<br />
 
 {% endblock %}
-
-    
- 

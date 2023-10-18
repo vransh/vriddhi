@@ -1,79 +1,79 @@
-{% extends "layout.html" %}
-{% block body %}
-  
-      
-
- 
+{% extends "layout.html" %} {% block body %}
 <head>
-  <title>Vriddhi</title>
-  <link href="{{url_for('static', filename='css/for_home.css')}}" rel="stylesheet">
- <!-- Include an external CSS file for styling -->
+  <title>Vriddhi-home</title>
+  <link
+    href="{{url_for('static', filename='css/for_home.css')}}"
+    rel="stylesheet"
+  />
 </head>
 
-  
-    <body>
-   
-      <div class="container-waterflow">
-        <div class="waterflow">
-       
+<body>
+  <div class="container-waterflow">
+    <div class="waterflow"></div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <body>
+    <div id="testimonial-grid-container">
+      <div id="top">
+        {% for post in posts %} {% if loop.index % 2 == 0 %}
+        <div id="testimonial-1" class="grid-item">
+          <div id="username-1">
+            <img
+              src="{{url_for('static', filename='img/user_icon.png')}}"
+              alt="user-icon"
+              width="24"
+              height="24"
+            />
+            <a href="/user_account/{{post.user.id}}">{{post.user.username}}</a
+            >•posted this on {{post.date}}
+          </div>
+          <a href="/individual_post/{{post.slug}}" |slugify|>
+            <div class="post-title-1">{{ post.title }}</div>
+          </a>
+          <div class="content-1">{{post.content[0:350]}}...</div>
+          <div class="chat-icon">
+            <a href="/chat"
+              ><i class="bi bi-chat-left-text-fill" id="chat"></i
+            ></a>
+          </div>
+          <hr />
         </div>
+
+        {% else %}
+        <div id="testimonial-2" class="grid-item">
+          <div id="username-1">
+            <img
+              src="{{url_for('static', filename='img/user_icon.png')}}"
+              alt="user-icon"
+              width="24"
+              height="24"
+            />
+            <a href="/user_account/{{post.user.id}}">{{post.user.username}}</a
+            >•posted this on {{post.date}}
+          </div>
+          <a href="/individual_post/{{post.slug}}" |slugify|>
+            <div class="post-title-1">{{ post.title }}</div>
+          </a>
+          <div class="content-1">{{post.content[0:300]}}...</div>
+          <div class="chat-icon">
+            <a href="/chat"
+              ><i class="bi bi-chat-left-text-fill" id="chat"></i
+            ></a>
+          </div>
+          <hr />
         </div>
-    
-          
-  
-     <br>
-     <br>
-     <br>
-  <br>
-   
-       <h2>••••</h2>
-        {% for post in posts %}
-     
-  
-    
-      <div class="container-1">
-     <div class="csub-1">
-         
-              <div class="post-preview-1">
-                <div id="username-1">
-                  <img  src="{{url_for('static', filename='img/i.png')}}" alt="" width="24" height="24" padding-top="10px">
-                  <a href="/user_account/{{post.user.id}}">{{post.user.username}}</a>•Joined on {{post.user.date}}
-                </div>
-                <a href="/individual_post/{{post.slug}}"|slugify|>
-              <div class="post-title-1">{{ post.title }}
 
-              </div>
-             
-            </a>
-            <p class="post-meta-1">➔ Posted this
-              <a href="#"></a>
-              on {{post.date}}</p>
-          </div>
-          <div class="content-1">
-          {{post.content[0:470]}}...
-          </div>
-        <br>
-       
-       
-          </div> 
-          <hr>
-          </div>
-          
-          </div>
-         
-          
+        {% endif %} {% endfor %}
+      </div>
+    </div>
+  </body>
+  <br />
+  <br />
+  <br />
+  <br />
 
-
-
-
-
-  {% endfor %}
- 
-    <br>
-  
-         
-     
-    </body>
-    {% endblock %}
-
-    
+  {% endblock %}
+</body>

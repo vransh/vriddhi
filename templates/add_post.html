@@ -2,35 +2,79 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.9"description="#add a post , #create something,#free platform to freely share">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"description="#add a post , #create something,#free platform to freely share">
     <title>Add Post</title>
     <link rel="icon" href="static/img/vriddhi_logo.png">
+    <link href='https://fonts.googleapis.com/css?family=Bungee Outline' rel='stylesheet'/>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+  />
     <style>
+        *{
+           outline: none;
+           border: none;
+           padding: 0;
+           margin: 0;
+           box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
-            background:linear-gradient(120deg,#000000 40%,rgb(211, 32, 32));
+            background:linear-gradient(120deg,#353535 91.2%,#d7d7d7 8.7%);
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            min-height: 100px;
+            max-height: min-content;
+
+            
         }
+        h1{
+            font-family: Bungee Outline;
+        }
+        .heading{
+            display: flex;
+            background-color: #ED243B;
+            justify-content: center;
+            align-items: center;
+            font-size: clamp(18px,3vw,45px);
+            height: clamp(80px,15vw,200px);
+            width: 100%;
+        }
+
         
         .add-post-container {
-            width: 80%;
+            width: 97%;
             max-width: 600px;
+            zoom: 90%;
             padding: 20px;
-            border: 1px solid #cfc015;
-            border-radius: 5px;
+            border: 1px solid #f6efef;
+            border-radius: 8px;
+            border: 5px solid black;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             background-color: #fff;
             text-align: center;
         }
+        .contact-image i{
+            font-size: clamp(20px,8vw,50px);
+        }
+        #title,#category{
+            border: none;
+            background-color:transparent;
+             text-decoration: underline;
+        }
+        .head-cont{
+         
+            height: 130px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+        }
 
         .add-post-header {
-            font-size: 24px;
+            font-size: clamp(24px,2vw,30px);
             margin-bottom: 20px;
-            font-family: Verdana, Geneva, Tahoma, sans-serif
+            color: #ED4024;
         }
 
         .form-group {
@@ -39,33 +83,27 @@
         }
 
         label {
-            font-weight: bold;
+            font-weight: 900;
         }
-
         input[type="text"],
         textarea {
             width: 96%;
-            padding: 2%;
-            border: 1px solid #ccc;
+            margin-top: 5px;
+            padding: 9px;
+            border: 2px solid black;
             border-radius: 5px;
             font-weight: 600;
-            font-size: 16px;
-        line-height: 1.2;
-        letter-spacing: 0.6%;
-        }
-
-        textarea {
-            resize: vertical;
-        
-          
+            font-size: clamp(16px,1vw,18px);
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            line-height: 1.1;
+            letter-spacing: 1px;
         }
         .contact-image img{
-    border-radius: 6rem;
-  
-    width: 4rem;
-    margin-top: -3%;
-    transform: rotate(29deg);
-}
+            border-radius: 6rem;
+            width: 4rem;
+            margin-top: -3%;
+            transform: rotate(29deg);
+        }
 
         .add-post-button {
             background:linear-gradient(120deg,rgb(0, 0, 0) 40%,rgb(144, 32, 32));
@@ -75,22 +113,47 @@
             padding: 10px 20px;
             font-size: 16px;
             font-weight: 600;
+            font-family:  Tahoma, sans-serif;
             cursor: pointer;
         }
 
         .add-post-button:hover {
             background:linear-gradient(120deg,rgb(0, 0, 0),rgb(144, 32, 32));
         }
+       /*media*/
+
+@media (min-width:876px){
+.add-post-container{
+  zoom: 110%;
+}
+
+}
+@media (min-width:1400px){
+.add-post-container{
+  zoom: 170%;
+}
+
+}
+@media (max-width:500px){
+.heading{
+    font-size: 18px;
+}
+}
+        
     </style>
 </head>
 <body>
-   
+   <div class="heading">
+     <h1>ADD A POST</h1>
+   </div>
     <div class="add-post-container">
+        <div class="head-cont">
         <div class="contact-image">
-            <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
+            <i class="bi bi-rocket-takeoff-fill"></i>
         </div>
         <form method="post"action="/add_post">
         <h1 class="add-post-header">Unleash your thinking</h1>
+        </div>
         <form>
             <div class="form-group">
                 <label for="title">Title:</label>

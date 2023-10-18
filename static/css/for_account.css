@@ -46,8 +46,7 @@ header.masthead {
   font-size: clamp(20px, 4vw, 40px);
   width: 300px;
   float: right;
-  font-family: 'quicksand';
-  border-radius: 0%;
+  font-family: 'rubik'
 }
 
 p {
@@ -61,7 +60,7 @@ p {
 
 h1 {
   font-size: clamp(32px, 6vw, 65px);
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;';
   color: rgb(253, 254, 255);
   margin-bottom: 20px;
   margin-top: 4%;
@@ -74,8 +73,9 @@ h1 {
 
 h2 {
   font-size: clamp(32px, 5vw, 65px);
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
   margin-bottom: 30px;
+  font-weight: 900;
   color: rgb(23, 150, 223);
   margin-left: 6%;
 }
@@ -84,6 +84,7 @@ h3 {
   font-size: clamp(25px, 3vw, 50px);
   margin-left: 10%;
   font-weight: 600;
+  font-family: 'rubik';
 }
 
 /*post*/

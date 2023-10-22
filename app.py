@@ -282,7 +282,7 @@ def poste():
 @app.route("/logout", methods=["GET", "POST"])
 def logout():
     session.pop("email", None)
-    return redirect("/signin")
+    return redirect("/")
 
 
 if __name__ == "__main__":

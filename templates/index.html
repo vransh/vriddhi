@@ -1,105 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=0.6, shrink-to-fit=no">
-<meta name="description" content="a platform to share, communicate your ideas. #Join live chat and share your opinions.
-  A new world of communication is now open.">
-<meta http-equiv="expires" content="Tue, 01 Jan 2025 12:00:00 GMT">
-<link rel="icon" href="static/img/vriddhi_logo.png" alt="Vriddhi-logo">
-<meta name="author" content="">
-<title>Vriddhi</title>
+  <head>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 2025 12:00:00 GMT" />
+    <meta
+      name="description"
+      content="a platform to share communicate your ideas. #Join live chat and share your opinions.
+    A new world of communication is now open. #JOIN FRONTS"
+    />
+    <meta name="author" content="" />
+    <link rel="icon" href="static/img/vriddhi_logo.png" alt="vriddhi logo" />
+   
 
-<header class="masthead" id="photu"
-  style="background-image: url('{{ url_for('static', filename='img/intro_image.jpg') }}')" alt="white sheet">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
-    *,
-    body {
-      font-weight: 400;
-      -webkit-font-smoothing: antialiased;
+    <title>Fronts</title>
 
-      -moz-osx-font-smoothing: grayscale;
-    }
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
 
-    html,
-    body {
-      height: 100%;
-      overflow: hidden;
-    }
 
-    #photu {
-      background: no-repeat;
-      background-color: #f6f4f4;
-      height: 100%;
-      width: 100%;
-      background-size: cover;
-    }
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="static/css/hero.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
 
-    .intro {
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  </head>
 
-    .sub-container {
-      margin: 10px;
-      width: 800px;
-    }
+<body>
 
-    .page-heading h1 {
-      font-size: clamp(80px, 5vw, 100px);
-      text-align: center;
-      font-weight: 800;
-      font-family: 'orbitron';
 
-    }
-
-    .subheading {
-      text-align: center;
-      margin-top: 15%;
-      font-size: clamp(40px, 4vw, 50px);
-      font-weight: 500;
-      font-family: 'Rubik', Verdana;
-
-    }
-
-    #intro_but {
-      font-size: clamp(24px, 5vw, 28px);
-      font-weight: 800;
-      margin-top: 8%;
-      margin-left: 4%;
-      color: black;
-      background: linear-gradient(#ffc3a0, #ffafbd);
-      border-radius: 6px;
-    }
-
-    span {
-      color: #00B5Ec;
-      font-weight: 900;
-      font-family: 'orbitron';
-    }
-  </style>
-  <div class="intro">
-    <div class="sub-container">
-      <div class="page-heading">
-        <h1>VR_iddH!</h1>
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="index.html" class="logo">
+                          <img src="assets/images/logo.png" alt="">
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                          <li class="scroll-to-section"><a href="/home" class="active">Home</a></li>
+                          <li class="scroll-to-section"><a href="/about_me">About</a></li>
+                          <li class="scroll-to-section"><a href="/new_account">Signup</a></li>
+                         
+                         
+                      </ul>        
+                     
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
       </div>
-      <div class="subheading">
-        <span>Explore</span>
-        the new world of <span>infinite </span>possibilities with the people
-        you know and with those you will know later.
-        </br>
-        <a class="btn btn" id='intro_but' href="/signin" role="button">Signin</a>
-        <a class="btn btn" id="intro_but" href="/new_account" role="button">Create_account</a>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <div class="swiper-container" id="top">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="slide-inner" style="background-image:url(static/img/infinity.jpg)">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8">
+                <div class="header-text">
+                  <h2> <em>Delve</em> deeper and rise among the people with your <em>unique
+
+                  </em>ideas and information from all people on <em>Fronts</em></h2>
+                 
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</header>
 
+  <!-- ***** Main Banner Area End ***** -->
+  <section class="calculator">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-5">
+          <form id="calculate" action="/signin" method="post">
+            <div class="row">
+              <div class="col-lg-6">
+                <fieldset>
+                 
+                  <input type="email" name="email" id="email" placeholder="  Email" autocomplete="on" required>
+                </fieldset>
+              </div>
+              <div class="col-lg-6">
+                <fieldset>
+                
+                  <input type="password" name="password" id="password"  placeholder="  Password" required="">
+                </fieldset>
+              </div>
+             
+             
+              <div class="col-lg-12">
+                <fieldset>
+                  <button type="submit" id="form-submit" class="orange-button">Signin</button>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+  <section class="about-us" id="about">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+          <div class="section-heading">
+            <h6>Why to come here ?</h6>
+            
+          </div>
+        </div>
+        <section class="services" id="services">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="service-item">
+                  <i class="fas fa-archive"></i>
+                  <h4>High serendipity</h4>
+                  <p>This website is made with the purpose of delievering very good content with less effort 
+                    .It is like a heaven for the learners and information-gatherers.it has very high percentage of
+                    good content from users.
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="service-item">
+                  <i class="fas fa-cloud"></i>
+                  <h4>Discussion through chat</h4>
+                  <p>It has chatting place where everyone can discuss their queries, doubts and answers from all users.</p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="service-item">
+                  <i class="fas fa-cloud"></i>
+                  <h4>This is on the beginner level</h4>
+                  <p>It is on a beginning stage and as the time goes on it will become more just like you.</p>
+                </div>
+              </div>
+              <br>
+             
+            </div>
+          </div>
+        </section>
+          
+       
+      </div>
+    </div>
+  </section>
+
+  
+
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>@ The individuals world || Fronts
+          
+          <br>Designed by <a title="CSS Templates" rel="sponsored" href="#" target="_blank">Me</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </body>
 </html>

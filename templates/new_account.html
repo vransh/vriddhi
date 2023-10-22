@@ -1,110 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=0.75, shrink-to-fit=no"
-    />
+    <meta charset="UTF-8" />
+    <title>ENter the WOrLd</title>
+    <link rel="stylesheet" href="static/css/signin.css" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 2025 12:00:00 GMT" />
     <meta
       name="description"
-      content="Create an account and start a new beggining on vriddhi"
+      content="a platform to share communicate your ideas. #Join live chat and share your opinions.
+    A new world of communication is now open. #JOIN FRONTS"
     />
     <meta name="author" content="" />
-    <link rel="icon" href="static/img/vriddhi_logo.png" alt="Vriddhi logo" />
-
-    <title>Start Your Journey</title>
-
+    <link rel="icon" href="static/img/vriddhi_logo.png" alt="vriddhi logo" />
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
-    />
-    <link
-      href="{{url_for('static', filename='css/signin.css')}}"
-      rel="stylesheet"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body>
-    <div class="form-holder">
-      <div class="form-content-create">
-        <div class="form-items">
-          <h4>Join the World of Curiosity</h4>
-          <div class="door-icon">
-            <i class="bi bi-door-open-fill"></i>
+  <body style="background-image: url(static/img/fire.jpg)">
+    <div class="container">
+      <input type="checkbox" id="flip" />
+      <div class="cover"></div>
+      <div class="forms">
+        <div class="form-content">
+          <div class="login-form">
+            <div class="title">Enter the world</div>
+            <form action="/new_account" method="post">
+              <div class="input-boxes">
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <input
+                    type="text"
+                    name="username"
+                    id="username"
+                    placeholder="Enter your username"
+                    required
+                  />
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <input
+                    name="email"
+                    id="email"
+                    type="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-lock"></i>
+                  <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Make a 8-digit Password"
+                    required
+                  />
+                </div>
+                <div class="input-box">
+                  <i class="fas fa-lock"></i>
+                  <input
+                    type="password"
+                    name="cpass"
+                    id="cpass"
+                    placeholder="Confirm password"
+                    required
+                  />
+                </div>
+
+                <div class="button input-box">
+                  <input type="submit" value="Submit" />
+                </div>
+                <div class="text sign-up-text">
+                  Already signed in ?
+                  <label for="flip"><a href="/">Login now</a></label>
+                </div>
+              </div>
+            </form>
           </div>
-          {% for message in get_flashed_messages() %}
-          <div class="alert alert-dark" role="alert" id="alert-create">
-            {{message}}
-          </div>
-          {% endfor %}
-          <br />
-          <form method="post" action="/new_account">
-            <div class="col-md-12">
-              <input
-                class="form-control"
-                type="text"
-                name="username"
-                placeholder="UserName (short)"
-                required
-              />
-              <div class="valid-feedback">Username field is valid!</div>
-              <div class="invalid-feedback">
-                Username field cannot be blank!
-              </div>
-            </div>
-
-            <div class="col-md-12">
-              <input
-                class="form-control"
-                type="email"
-                name="email"
-                placeholder="Email"
-                required
-              />
-              <div class="valid-feedback">Email field is valid!</div>
-              <div class="invalid-feedback">Email field cannot be blank!</div>
-            </div>
-
-            <div class="col-md-12">
-              <input
-                class="form-control"
-                type="password"
-                name="password"
-                placeholder="Make a 8-digit Password"
-                required
-              />
-              <div class="valid-feedback">Password field is valid!</div>
-              <div class="invalid-feedback">
-                Password field cannot be blank!
-              </div>
-            </div>
-
-            <div class="col-md-12">
-              <input
-                class="form-control"
-                type="password"
-                name="cpass"
-                placeholder="Confirm Password"
-                required
-              />
-              <div class="valid-feedback">Password field is valid!</div>
-              <div class="invalid-feedback">
-                Password field cannot be blank!
-              </div>
-            </div>
-
-            <div class="form-button mt-3">
-              <button id="button" type="submit" class="btn btn-primary">
-                Register
-              </button>
-            </div>
-          </form>
         </div>
       </div>
     </div>

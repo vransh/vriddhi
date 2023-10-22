@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"description="#add a post , #create something,#free platform to freely share">
-    <title>Add Post</title>
+    <title>Fronts-Add Post</title>
     <link rel="icon" href="static/img/vriddhi_logo.png">
     <link href='https://fonts.googleapis.com/css?family=Bungee Outline' rel='stylesheet'/>
     <link
@@ -16,17 +16,21 @@
            border: none;
            padding: 0;
            margin: 0;
+           
            box-sizing: border-box;
+        }
+        html{
+            height: 100%;
         }
         body {
             font-family: Arial, sans-serif;
-            background:linear-gradient(120deg,#353535 91.2%,#d7d7d7 8.7%);
+            background:linear-gradient(120deg,#010028 91.2%,#d7d7d7 8.7%);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 100px;
-            max-height: min-content;
+            height: 100%;
+            
 
             
         }
@@ -40,6 +44,7 @@
             align-items: center;
             font-size: clamp(18px,3vw,45px);
             height: clamp(80px,15vw,200px);
+          
             width: 100%;
         }
 
@@ -49,11 +54,11 @@
             max-width: 600px;
             zoom: 90%;
             padding: 20px;
-            border: 1px solid #f6efef;
+            
             border-radius: 8px;
             border: 5px solid black;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
+            background-color: transparent;
             text-align: center;
         }
         .contact-image i{
@@ -62,7 +67,7 @@
         #title,#category{
             border: none;
             background-color:transparent;
-             text-decoration: underline;
+            color:#faf7ff
         }
         .head-cont{
          
@@ -84,6 +89,7 @@
 
         label {
             font-weight: 900;
+            color:#8685ef
         }
         input[type="text"],
         textarea {
@@ -97,12 +103,14 @@
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             line-height: 1.1;
             letter-spacing: 1px;
+            background-color: #faf7ff;
         }
-        .contact-image img{
+        .contact-image i{
             border-radius: 6rem;
             width: 4rem;
             margin-top: -3%;
             transform: rotate(29deg);
+            color:#d3fbde;
         }
 
         .add-post-button {
@@ -137,6 +145,10 @@
 @media (max-width:500px){
 .heading{
     font-size: 18px;
+}
+.add-post-container{
+    width: 100%;
+    height: 100%;
 }
 }
         
